@@ -50,14 +50,14 @@ export default function PublicsPage() {
 
       <section className="py-16 px-6 bg-[#F4F5F8]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          {publics.map((public) => (
-            <div key={public.title} className="p-6 bg-white rounded border border-[#E2E5EC]">
-              <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{public.title}</h2>
-              <p className="text-[#5A6072] mb-4">{public.description}</p>
+          {publics.map((publicCible) => (
+            <div key={publicCible.title} className="p-6 bg-white rounded border border-[#E2E5EC]">
+              <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{publicCible.title}</h2>
+              <p className="text-[#5A6072] mb-4">{publicCible.description}</p>
               <div>
                 <h3 className="text-sm font-semibold text-[#0D1F5C] mb-2">Besoins typiques</h3>
                 <ul className="text-sm text-[#5A6072] list-disc list-inside">
-                  {public.besoins.map((besoin) => (
+                  {publicCible.besoins.map((besoin) => (
                     <li key={besoin}>{besoin}</li>
                   ))}
                 </ul>
