@@ -1,0 +1,40 @@
+{
+  "home": {
+    "hero": {
+      "title": "Design the skills that agro-systemic projects need",
+      "description": "We design professional training systems adapted to the realities of agro-system professions: competency frameworks, curricula, educational content and assessment tools. Partner training organizations lead the sessions.",
+      "cta_framing": "Request a pedagogical framework",
+      "cta_services": "Discover our services"
+    },
+    "distinction": {
+      "title": "Our role:",
+      "text": "XP-NOVA designs training systems (frameworks, curricula, content, assessments). Session facilitation, trainer mobilization and participant management are provided by partner training organizations according to our specifications."
+    },
+    "services": {
+      "title": "7 services for quality professional training",
+      "intro": "We support the design of complete training systems, from skills needs diagnosis to learning assessment."
+    },
+    "publics": {
+      "title": "7 audiences for adapted training",
+      "intro": "Our training systems are designed to meet the needs of various agro-system actors."
+    },
+    "cta": {
+      "title": "Does your project need a training system?",
+      "subtitle": "Our pedagogical engineers support you in the design of frameworks, curricula and content adapted to the realities of the agro-system.",
+      "button": "Request a pedagogical framework"
+    }
+  },
+  "nav": {
+    "about": "About",
+    "approach": "Approach",
+    "publics": "Audiences",
+    "services": "Services",
+    "network": "Network",
+    "references": "References",
+    "contact": "Contact"
+  },
+  "common": {
+    "email": "hello@xp-nova.com",
+    "phone": "+237 6 70 04 80 00"
+  }
+}
