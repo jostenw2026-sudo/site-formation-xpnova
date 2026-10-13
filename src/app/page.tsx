@@ -45,18 +45,43 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Diagnostic métiers',
-              'Référentiels',
-              'Curricula et parcours',
-              'Contenus et supports',
-              'Évaluation des acquis',
-              'Cahiers des charges',
-              'Suivi pédagogique',
+              {
+                title: 'Diagnostic métiers',
+                description: 'Analyse des besoins en compétences et cartographie des métiers.',
+              },
+              {
+                title: 'Référentiels',
+                description: 'Référentiels de compétences et de métiers adaptés aux réalités locales.',
+              },
+              {
+                title: 'Curricula et parcours',
+                description: 'Curricula et parcours pédagogiques structurés : objectifs, modules, durées.',
+              },
+              {
+                title: 'Contenus et supports',
+                description: 'Supports pédagogiques, guides pratiques et études de cas contextualisés.',
+              },
+              {
+                title: 'Évaluation des acquis',
+                description: "Outils d'évaluation : tests, mises en situation et grilles d'observation.",
+              },
+              {
+                title: 'Cahiers des charges',
+                description: 'Cahiers des charges pour organismes de formation partenaires.',
+              },
+              {
+                title: 'Suivi pédagogique',
+                description: 'Dispositifs de suivi et de pilotage : indicateurs et tableaux de bord.',
+              },
             ].map((service) => (
-              <div key={service} className="p-4 border border-[#E2E5EC] rounded hover:border-[#D4A017] transition-colors">
-                <h3 className="font-semibold text-[#0D1F5C] mb-2">{service}</h3>
-                <p className="text-sm text-[#5A6072]">Détails à venir</p>
-              </div>
+              <a
+                key={service.title}
+                href="/services"
+                className="p-4 border border-[#E2E5EC] rounded hover:border-[#D4A017] transition-colors block"
+              >
+                <h3 className="font-semibold text-[#0D1F5C] mb-2">{service.title}</h3>
+                <p className="text-sm text-[#5A6072]">{service.description}</p>
+              </a>
             ))}
           </div>
         </div>
@@ -71,18 +96,43 @@ export default function Home() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              'Promoteurs',
-              'Coopératives',
-              'Entreprises agro-industrielles',
-              'Collectivités',
-              'Programmes',
-              'Organismes de formation',
-              'Partenaires',
+              {
+                title: 'Promoteurs',
+                description: 'Porteurs de projets agro-systémiques nécessitant des compétences pour leurs équipes.',
+              },
+              {
+                title: 'Coopératives',
+                description: 'Groupements de producteurs nécessitant des formations techniques et organisationnelles.',
+              },
+              {
+                title: 'Entreprises agro-industrielles',
+                description: 'Unités de transformation nécessitant des compétences pour leurs opérateurs et techniciens.',
+              },
+              {
+                title: 'Collectivités',
+                description: 'Communes, départements et régions développant des projets territoriaux.',
+              },
+              {
+                title: 'Programmes',
+                description: 'Programmes de développement finançant des projets de renforcement de capacités.',
+              },
+              {
+                title: 'Organismes de formation',
+                description: "Centres de formation professionnelle souhaitant enrichir leur offre.",
+              },
+              {
+                title: 'Partenaires',
+                description: 'Institutions, bailleurs et ONG finançant des projets de renforcement de capacités.',
+              },
             ].map((publicCible) => (
-              <div key={publicCible} className="p-4 bg-white rounded border border-[#E2E5EC]">
-                <h3 className="font-semibold text-[#0D1F5C] mb-2">{publicCible}</h3>
-                <p className="text-sm text-[#5A6072]">Détails à venir</p>
-              </div>
+              <a
+                key={publicCible.title}
+                href="/publics"
+                className="p-4 bg-white rounded border border-[#E2E5EC] hover:border-[#D4A017] transition-colors block"
+              >
+                <h3 className="font-semibold text-[#0D1F5C] mb-2">{publicCible.title}</h3>
+                <p className="text-sm text-[#5A6072]">{publicCible.description}</p>
+              </a>
             ))}
           </div>
         </div>
