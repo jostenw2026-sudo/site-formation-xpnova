@@ -122,7 +122,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
             src="/brand/logo_xpnova_white.png"
             alt="XP-NOVA — Bureau d'Ingénierie Conseil"
             width={350}
- height={80}
+            height={80}
             className="h-[52px] w-auto"
           />
           <p className="mt-3.5 text-[1.2rem] font-bold italic leading-none text-[#D4A017]/80">
@@ -154,7 +154,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
           </p>
         </div>
 
-        {/* Navigation EN : liens /en/* */}
+        {/* Navigation */}
         <div>
           <p className="mb-3 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-[#D4A017]">
             {t.navigation}
@@ -175,7 +175,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
           <p className="mb-3 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-[#D4A017]">
             {t.portal}
           </p>
-          <ul className="space-y-[0.42rem] text-[0.9rem] leading Footer.tsx share">
+          <ul className="space-y-[0.42rem] text-[0.9rem] leading-snug">
             {t.portalItems.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="text-white/70 hover:text-[#D4A017] no-underline">
