@@ -2,6 +2,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Diagnostic métiers',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/832fead0.webp',
       definition:
         "Analyser les besoins en compétences d'une organisation, cartographier les métiers et identifier les écarts entre compétences disponibles et attendues.",
       description:
@@ -13,6 +14,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Référentiels',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/82a15399.webp',
       definition:
         "Concevoir des référentiels d'activités et de compétences ainsi que des référentiels de métiers, alignés sur les réalités locales et les standards de référence.",
       description:
@@ -24,6 +26,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Curricula et parcours',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/c1b762d4.webp',
       definition:
         "Structurer des curricula et parcours pédagogiques complets : objectifs d'apprentissage, modules, séquences, durées et méthodes d'animation.",
       description:
@@ -35,6 +38,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Contenus et supports',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/36bf6879.webp',
       definition:
         "Produire des contenus pédagogiques adaptés au public cible : supports de cours, guides pratiques, études de cas et exercices contextualisés.",
       description:
@@ -46,6 +50,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Évaluation des acquis',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/812b251c.webp',
       definition:
         "Concevoir des outils d'évaluation des compétences : tests de connaissances, mises en situation et grilles d'observation objectives.",
       description:
@@ -57,6 +62,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Cahiers des charges',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/1af5bfb4.webp',
       definition:
         "Rédiger des cahiers des charges destinés aux organismes de formation partenaires : objectifs pédagogiques, profils requis et infrastructures.",
       description:
@@ -68,6 +74,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Suivi pédagogique',
+      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/fbcd438d.webp',
       definition:
         "Concevoir des dispositifs de suivi et de pilotage pédagogique : indicateurs, tableaux de bord et modèles de rapports.",
       description:
@@ -93,24 +100,32 @@ export default function ServicesPage() {
       <section className="py-16 px-6 bg-[#F4F5F8]">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
-            <div key={service.title} className="p-6 bg-white rounded border border-[#E2E5EC]">
-              <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
-              <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
-              <div className="mb-4">
-                <h3 className="text-sm font-semibold text-[#0D1F5C] mb-2">Livrables</h3>
-                <ul className="text-sm text-[#5A6072] list-disc list-inside">
-                  {service.livrables.map((livrable) => (
-                    <li key={livrable}>{livrable}</li>
-                  ))}
-                </ul>
+            <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
+              <img
+                src={service.image}
+                alt={`Illustration — ${service.title}`}
+                className="w-full h-40 object-cover"
+                loading="lazy"
+              />
+              <div className="p-6 flex flex-col flex-1">
+                <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
+                <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold text-[#0D1F5C] mb-2">Livrables</h3>
+                  <ul className="text-sm text-[#5A6072] list-disc list-inside">
+                    {service.livrables.map((livrable) => (
+                      <li key={livrable}>{livrable}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-sm font-semibold text-[#0D1F5C] mb-2">Périmètre d'intervention</h3>
+                  <p className="text-sm text-[#5A6072]">{service.perimetre}</p>
+                </div>
+                <p className="text-sm text-[#5A6072] mt-auto">
+                  <span className="font-semibold">Durée indicative :</span> {service.duree}
+                </p>
               </div>
-              <div className="mb-4">
-                <h3 className="text-sm font-semibold text-[#0D1F5C] mb-2">Périmètre d'intervention</h3>
-                <p className="text-sm text-[#5A6072]">{service.perimetre}</p>
-              </div>
-              <p className="text-sm text-[#5A6072]">
-                <span className="font-semibold">Durée indicative :</span> {service.duree}
-              </p>
             </div>
           ))}
         </div>
