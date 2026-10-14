@@ -1,0 +1,40 @@
+{
+  "home": {
+    "hero": {
+      "title": "Concevoir les compétences dont les projets agro-systémiques ont besoin",
+      "description": "Nous concevons des dispositifs de formation professionnelle adaptés aux réalités des métiers de l'agrosystème : référentiels, curricula, contenus pédagogiques et outils d'évaluation. Les organismes de formation partenaires animent les sessions.",
+      "cta_framing": "Demander un cadrage pédagogique",
+      "cta_services": "Découvrir nos services"
+    },
+    "distinction": {
+      "title": "Notre rôle :",
+      "text": "XP-NOVA conçoit les dispositifs de formation (référentiels, curricula, contenus, évaluations). L'animation des sessions, la mobilisation des formateurs et la gestion des participants sont assurées par des organismes de formation partenaires selon nos spécifications."
+    },
+    "services": {
+      "title": "7 services pour des formations professionnelles de qualité",
+      "intro": "Nous accompagnons la conception de dispositifs de formation complets, du diagnostic des besoins en compétences jusqu'à l'évaluation des acquis."
+    },
+    "publics": {
+      "title": "7 publics pour des formations adaptées",
+      "intro": "Nos dispositifs de formation sont conçus pour répondre aux besoins de divers acteurs de l'agrosystème."
+    },
+    "cta": {
+      "title": "Votre projet a besoin d'un dispositif de formation ?",
+      "subtitle": "Nos ingénieurs pédagogiques vous accompagnent dans la conception de référentiels, curricula et contenus adaptés aux réalités de l'agrosystème.",
+      "button": "Demander un cadrage pédagogique"
+    }
+  },
+  "nav": {
+    "about": "À propos",
+    "approach": "Approche",
+    "publics": "Publics",
+    "services": "Services",
+    "network": "Réseau",
+    "references": "Références",
+    "contact": "Contact"
+  },
+  "common": {
+    "email": "hello@xp-nova.com",
+    "phone": "+237 6 70 04 80 00"
+  }
+}
