@@ -3,6 +3,7 @@ import { UtilityBar } from "@/components/shared/UtilityBar";
 import { DivisionBadge } from "@/components/shared/DivisionBadge";
 import { SharedNavigation } from "@/components/shared/SharedNavigation";
 import Footer from "@/components/Footer";
+import { ConditionalFrenchLayout } from "@/components/ConditionalFrenchLayout";
 import "./globals.css";
 
 const isProd = process.env.SITE_ENV === "production";
@@ -59,19 +60,23 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className="min-h-full flex flex-col">
-        {/* Bandeau + navigation collés en haut de l'écran au scroll */}
-        <div className="sticky top-0 z-50">
-          <UtilityBar divisions={divisions} siteUrl="https://xp-nova.com" currentKey="formation" />
-          <SharedNavigation
-            items={navItems}
-            logoSrc="/brand/logo_xpnova_color.png"
-            logoAlt="XP-NOVA"
-            logoHref="/"
-          />
-        </div>
-        <DivisionBadge divisionName="Ingénierie de la formation" />
+        <ConditionalFrenchLayout>
+          {/* Bandeau + navigation collés en haut de l'écran au scroll */}
+          <div className="sticky top-0 z-50">
+            <UtilityBar divisions={divisions} siteUrl="https://xp-nova.com" currentKey="formation" />
+            <SharedNavigation
+              items={navItems}
+              logoSrc="/brand/logo_xpnova_color.png"
+              logoAlt="XP-NOVA"
+              logoHref="/"
+            />
+          </div>
+          <DivisionBadge divisionName="Ingénierie de la formation" />
+        </ConditionalFrenchLayout>
         <main className="flex-1">{children}</main>
-        <Footer />
+        <ConditionalFrenchLayout>
+          <Footer />
+        </ConditionalFrenchLayout>
       </body>
     </html>
   );
