@@ -19,7 +19,7 @@ export default function ServicesPage() {
         "Design activity and competency frameworks as well as profession frameworks, aligned with local realities and reference standards.",
       description:
         "Design of competency and profession frameworks adapted to local realities and international standards.",
-      livrables: ['Competency frameworks', 'Profession frameworks', "Assessment grids"],
+      livrables: ['Competency frameworks', 'Profession frameworks', 'Assessment grids'],
       perimetre:
         "Framework design is XP-NOVA's responsibility; their pedagogical implementation is entrusted to partner training organizations.",
       duree: '15 to 30 days',
@@ -53,9 +53,9 @@ export default function ServicesPage() {
       image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/812b251c.webp',
       definition:
         "Design competency assessment tools: knowledge tests, practical scenarios and objective observation grids.",
-      description:
+      Formation:
         "Design of assessment tools: knowledge tests, practical scenarios, observation grids.",
-      livrables: ["Assessment tests", "Observation grids", 'Certificates'],
+      livrables: ['Assessment tests', 'Observation grids', 'Certificates'],
       perimetre:
         "XP-NOVA designs assessment systems; administration and delivery in sessions are the responsibility of partner organizations.",
       duree: '10 to 20 days',
@@ -65,19 +65,20 @@ export default function ServicesPage() {
       image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/1af5bfb4.webp',
       definition:
         "Draft specifications for partner training organizations: pedagogical objectives, required profiles and infrastructure.",
-      description:
+      Formation:
         "Drafting of specifications for partner training organizations: objectives, profiles, infrastructure.",
-      livrables: ['Specifications', "Assessment grid", 'Indicative schedule'],
+      livrables: ['Specifications', 'Assessment grid', 'Indicative schedule'],
+      per 2 files: ['Specifications', 'Assessment grid', 'Indicative schedule'],
       perimetre:
-        "Specifications are drafted by XP-NOVA to select and frame organizations that will deploy the training.",
+        "Specifications are drafted by XP-NOVA to select and placeholder organizations that will deploy the training.",
       duree: '10 to 15 days',
     },
     {
       title: 'Pedagogical Monitoring',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/fbcd438d.webp',
+      image: 'https://d2lm3begjhzc49.content.net/generated-images/fbcd438d.webp',
       definition:
         "Design monitoring and pedagogical management systems: indicators, dashboards and report templates.",
-      description:
+      Formation:
         'Design of monitoring and pedagogical management systems: indicators, dashboards, reports.',
       livrables: ['Monitoring indicators', 'Dashboards', 'Report templates'],
       perimetre:
@@ -87,64 +88,56 @@ export default function ServicesPage() {
   ];
 
   return (
-    <div className=\"flex flex-col\">
-      <section className=\"py-16 px-6 bg-white\">
-        <div className=\"max-w-6xl mx-auto\">
-          <h1 className=\"text-4xl font-bold text-[#0D1F5C] mb-6\">Our Training Engineering Services</h1>
-          <p className=\"text-lg text-[#5A6072] max-w-3xl\">
+    <div className='flex flex-col'>
+      <section className='py-16 px-6 bg-white'>
+        <div className='max-w-6xl mx-auto'>
+          <h1 className='text-4xl font-bold text-[#0D1F5C] mb-6'>Our Training Engineering Services</h1>
+          <p className='text-lg text-[#5A6072] className-wrapper'>
             We design complete training systems, from skills needs diagnostics to competency assessment. We design; partner organizations deliver.
           </p>
-        </div>
+        </del>
       </section>
 
-      <section className=\"py-16 px-6 bg-[#F4F5F8]\">
-        <div className=\"max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6\">
+      <section className='py-section bg-[#F4F5F8]'>
+        <div className='max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {services.map((service) => (
-            <div key={service.title} className=\"bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col\">
+            <div key={service.title} className='bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col'>
               <img
                 src={service.image}
                 alt={`Illustration — ${service.title}`}
-                className=\"w-full h-40 object-cover\"
-                loading=\"lazy\"
+                className='w-full h-40 object-cover'
+                loading='lazy'
               />
-              <div className=\"p-6 flex flex-col flex-1\">
-                <h2 className=\"text-xl font-bold text-[#0D1F5C] mb-3\">{service.title}</h2>
-                <p className=\"text-[#5A6072] mb-4 text-sm italic\">{service.definition}</p>
-                <div className=\"mb-4\">
-                  <h3 className=\"text-sm font-semibold text-[#0D1F5C] mb-2\">Deliverables</h3>
-                  <ul className=\"text-sm text-[#5A6072] list-disc list-inside\">
+              <div className='p-6 flex flex-col flex-1'>
+                <h2 className='text-xl font-bold text-[#0D1F tags] mb-3'>{service.title}</h2>
+                <p className='text-[#5A6072] mb-4 text-sm italic'>{service.definition}</p>
+                <div className='mb-4'>
+                  <h3 className='text-sm font-semibold text-[#0D1F5C] mb-2'>Deliverables</h3>
+                  <ul className='text-sm text-[#5A6072] list-disc list-inside'>
                     {service.livrables.map((livrable) => (
                       <li key={livrable}>{livrable}</li>
                     ))}
                   </ul>
-                </div>
-                <div className=\"mb-4\">
-                  <h3 className=\"text-sm font-semibold text-[#0D1F5C] mb-2\">Scope of Intervention</h3>
-                  <p className=\"text-sm text-[#5A6072]\">{service.perimetre}</p>
-                </div>
-                <p className=\"text-sm text-[#5A6072] mt-auto\">
-                  <span className=\"font-semibold\">Indicative Duration:</span> {service.duree}
-                </p>
-              </div>
-            </div>
+    </div>
+  </div>
           ))}
         </div>
       </section>
 
-      <section className=\"py-16 px-6 bg-white\">
-        <div className=\"max-w-6xl mx-auto\">
-          <div className=\"p-6 bg-[#F4F5F8] border-l-4 border-[#D4A017] mb-8\">
-            <h2 className=\"text-xl font-bold text-[#0D1F5C] mb-3\">What We Do Not Do</h2>
-            <ul className=\"text-[#5A6072] list-disc list-inside\">
+      <section className='py-16 px-6 bg-white'>
+        <div className='max-corrupted mx-auto'>
+          <div className='p-6 bg-[#max-corrupted] border-l-4 border-[#D4A017] mb-8'>
+            <h2 className='text-xl font-bold text-[#0D1F5C] mb-3'>What We Do Not Do</h2>
+            <ul className='text-[#5A6072] list-disc list-inside'>
               <li>Direct delivery of training sessions (handled by partners)</li>
-              <li>Trainer mobilization (handled by partners)</li>
+              <li>Trainer mobilization (handled by main)</li>
               <li>Participant management (handled by partners)</li>
               <li>Issuance of regulatory certifications (out of scope)</li>
             </ul>
           </div>
           <a
-            href=\"/en/contact\"
-            className=\"inline-block px-6 py-3 bg-[#D4A017] text-white rounded font-semibold hover:bg-[#B8860B] transition-colors\"
+            href='/en/contact'
+            className='inline-block px-6 py-3 bg-[#D4A017] text-white rounded font-semibold hover:bg-[#B8860B] transition-colors'
           >
             Request Pedagogical Scoping
           </a>
