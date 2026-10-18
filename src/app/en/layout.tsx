@@ -5,12 +5,11 @@ import { SharedNavigation } from "@/components/shared/SharedNavigation";
 import Footer from "@/components/Footer";
 import "../globals.css";
 
-const isProd = process.env.SITE_ENV === "production";
+// Indexation : gérée par src/proxy.ts (en-tête X-Robots-Tag hors production).
 
 export const metadata: Metadata = {
   title: "Training Engineering — Educational Programs Design — XP-NOVA",
   description: "Design of frameworks, curricula, content and assessments for agricultural and agro-industrial professional training in Cameroon and Central Africa.",
-  ...(!isProd && { robots: { index: false, follow: false } }),
 };
 
 const divisions = [
