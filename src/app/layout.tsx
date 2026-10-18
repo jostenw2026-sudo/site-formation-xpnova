@@ -6,12 +6,11 @@ import Footer from "@/components/Footer";
 import { ConditionalFrenchLayout } from "@/components/ConditionalFrenchLayout";
 import "./globals.css";
 
-const isProd = process.env.SITE_ENV === "production";
+// Indexation : gérée par src/proxy.ts (en-tête X-Robots-Tag hors production).
 
 export const metadata: Metadata = {
   title: "Ingénierie de la formation — Conception de dispositifs pédagogiques — XP-NOVA",
   description: "Conception de référentiels, curricula, contenus et évaluations pour la formation professionnelle agricole et agro-industrielle au Cameroun et en Afrique centrale.",
-  ...(!isProd && { robots: { index: false, follow: false } }),
 };
 
 const divisions = [
