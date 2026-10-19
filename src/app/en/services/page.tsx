@@ -101,11 +101,8 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
-              {/* Illustration générée par IA, hébergée par le site (DG, 20/10/2026) : la légende évite de la faire passer pour une photo (CDC §8). */}
-              <figure className="m-0">
-                <img src={service.image} alt={`Illustration — ${service.title}`} className="w-full h-40 object-cover" loading="lazy" width={1200} height={800} />
-                <figcaption className="px-3 py-1 text-xs text-[#4A5068] bg-[#F4F5F8]">Generated illustration, for information only</figcaption>
-              </figure>
+              {/* Illustration générée par IA, hébergée par le site : mention unique en bas de la liste (DG, 20/10/2026). */}
+              <img src={service.image} alt={`Illustration — ${service.title}`} className="w-full h-40 object-cover" loading="lazy" width={1200} height={800} />
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
                 <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
@@ -128,6 +125,7 @@ export default function ServicesPage() {
             </div>
           ))}
         </div>
+        <p className="max-w-6xl mx-auto mt-8 text-[11px] leading-snug text-[#5A6072]">Illustrations on this page are generated and for information only.</p>
       </section>
 
       <section className="py-16 px-6 bg-white">
