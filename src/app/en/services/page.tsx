@@ -2,6 +2,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Skills Diagnostics',
+      image: '/images/illustrations/diagnostic-metiers.webp',
       definition:
         "Analyze an organization's skills needs, map professions and identify gaps between available and expected competencies.",
       description:
@@ -13,6 +14,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Frameworks',
+      image: '/images/illustrations/referentiels.webp',
       definition:
         "Design activity and competency frameworks as well as profession frameworks, aligned with local realities and reference standards.",
       description:
@@ -24,6 +26,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Curricula and Pathways',
+      image: '/images/illustrations/curricula-parcours.webp',
       definition:
         "Structure complete curricula and pedagogical pathways: learning objectives, modules, sequences, durations and animation methods.",
       description:
@@ -35,6 +38,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Content and Materials',
+      image: '/images/illustrations/contenus-supports.webp',
       definition:
         "Produce pedagogical content adapted to the target audience: course materials, practical guides, case studies and contextualized exercises.",
       description:
@@ -46,6 +50,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Competency Assessment',
+      image: '/images/illustrations/evaluation-acquis.webp',
       definition:
         "Design competency assessment tools: knowledge tests, practical scenarios and objective observation grids.",
       description:
@@ -57,6 +62,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Specifications',
+      image: '/images/illustrations/cahiers-des-charges.webp',
       definition:
         "Draft specifications for partner training organizations: pedagogical objectives, required profiles and infrastructure.",
       description:
@@ -68,6 +74,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Pedagogical Monitoring',
+      image: '/images/illustrations/suivi-pedagogique.webp',
       definition:
         "Design monitoring and pedagogical management systems: indicators, dashboards and report templates.",
       description:
@@ -94,8 +101,11 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
-              {/* Images générées par IA (CDN tiers) retirées — CDC-RECETTE §7, lot 6. */}
-              <div aria-hidden className="h-1.5 bg-[#B4470F]" />
+              {/* Illustration générée par IA, hébergée par le site (DG, 20/10/2026) : la légende évite de la faire passer pour une photo (CDC §8). */}
+              <figure className="m-0">
+                <img src={service.image} alt={`Illustration — ${service.title}`} className="w-full h-40 object-cover" loading="lazy" width={1200} height={800} />
+                <figcaption className="px-3 py-1 text-xs text-[#4A5068] bg-[#F4F5F8]">Generated illustration, for information only</figcaption>
+              </figure>
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
                 <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>

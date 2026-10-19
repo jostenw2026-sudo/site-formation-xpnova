@@ -2,6 +2,7 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Diagnostic métiers',
+      image: '/images/illustrations/diagnostic-metiers.webp',
       definition:
         "Analyser les besoins en compétences d'une organisation, cartographier les métiers et identifier les écarts entre compétences disponibles et attendues.",
       description:
@@ -13,6 +14,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Référentiels',
+      image: '/images/illustrations/referentiels.webp',
       definition:
         "Concevoir des référentiels d'activités et de compétences ainsi que des référentiels de métiers, alignés sur les réalités locales et les standards de référence.",
       description:
@@ -24,6 +26,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Curricula et parcours',
+      image: '/images/illustrations/curricula-parcours.webp',
       definition:
         "Structurer des curricula et parcours pédagogiques complets : objectifs d'apprentissage, modules, séquences, durées et méthodes d'animation.",
       description:
@@ -35,6 +38,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Contenus et supports',
+      image: '/images/illustrations/contenus-supports.webp',
       definition:
         "Produire des contenus pédagogiques adaptés au public cible : supports de cours, guides pratiques, études de cas et exercices contextualisés.",
       description:
@@ -46,6 +50,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Évaluation des acquis',
+      image: '/images/illustrations/evaluation-acquis.webp',
       definition:
         "Concevoir des outils d'évaluation des compétences : tests de connaissances, mises en situation et grilles d'observation objectives.",
       description:
@@ -57,6 +62,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Cahiers des charges',
+      image: '/images/illustrations/cahiers-des-charges.webp',
       definition:
         "Rédiger des cahiers des charges destinés aux organismes de formation partenaires : objectifs pédagogiques, profils requis et infrastructures.",
       description:
@@ -68,6 +74,7 @@ export default function ServicesPage() {
     },
     {
       title: 'Suivi pédagogique',
+      image: '/images/illustrations/suivi-pedagogique.webp',
       definition:
         "Concevoir des dispositifs de suivi et de pilotage pédagogique : indicateurs, tableaux de bord et modèles de rapports.",
       description:
@@ -94,8 +101,11 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
-              {/* Images générées par IA (CDN tiers) retirées — CDC-RECETTE §7, lot 6. */}
-              <div aria-hidden className="h-1.5 bg-[#B4470F]" />
+              {/* Illustration générée par IA, hébergée par le site (DG, 20/10/2026) : la légende évite de la faire passer pour une photo (CDC §8). */}
+              <figure className="m-0">
+                <img src={service.image} alt={`Illustration — ${service.title}`} className="w-full h-40 object-cover" loading="lazy" width={1200} height={800} />
+                <figcaption className="px-3 py-1 text-xs text-[#4A5068] bg-[#F4F5F8]">Illustration générée, non contractuelle</figcaption>
+              </figure>
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
                 <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
