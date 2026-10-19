@@ -2,7 +2,6 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Skills Diagnostics',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/832fead0.webp',
       definition:
         "Analyze an organization's skills needs, map professions and identify gaps between available and expected competencies.",
       description:
@@ -14,7 +13,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Frameworks',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/82a15399.webp',
       definition:
         "Design activity and competency frameworks as well as profession frameworks, aligned with local realities and reference standards.",
       description:
@@ -26,7 +24,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Curricula and Pathways',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/c1b762d4.webp',
       definition:
         "Structure complete curricula and pedagogical pathways: learning objectives, modules, sequences, durations and animation methods.",
       description:
@@ -38,7 +35,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Content and Materials',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/36bf6879.webp',
       definition:
         "Produce pedagogical content adapted to the target audience: course materials, practical guides, case studies and contextualized exercises.",
       description:
@@ -50,7 +46,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Competency Assessment',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/812b251c.webp',
       definition:
         "Design competency assessment tools: knowledge tests, practical scenarios and objective observation grids.",
       description:
@@ -62,7 +57,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Specifications',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/1af5bfb4.webp',
       definition:
         "Draft specifications for partner training organizations: pedagogical objectives, required profiles and infrastructure.",
       description:
@@ -74,7 +68,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Pedagogical Monitoring',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/fbcd438d.webp',
       definition:
         "Design monitoring and pedagogical management systems: indicators, dashboards and report templates.",
       description:
@@ -101,12 +94,8 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
-              <img
-                src={service.image}
-                alt={`Illustration — ${service.title}`}
-                className="w-full h-40 object-cover"
-                loading="lazy"
-              />
+              {/* Images générées par IA (CDN tiers) retirées — CDC-RECETTE §7, lot 6. */}
+              <div aria-hidden className="h-1.5 bg-[#B4470F]" />
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
                 <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
@@ -144,7 +133,7 @@ export default function ServicesPage() {
           </div>
           <a
             href="/en/contact"
-            className="inline-block px-6 py-3 bg-[#D4A017] text-white rounded font-semibold hover:bg-[#B8860B] transition-colors"
+            className="inline-block px-6 py-3 bg-[#D4A017] text-[#0D1F5C] rounded font-semibold hover:bg-[#E9C25A] transition-colors"
           >
             Request Pedagogical Scoping
           </a>

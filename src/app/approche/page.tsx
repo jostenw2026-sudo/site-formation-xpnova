@@ -39,7 +39,7 @@ export default function ApprochePage() {
           <div className="space-y-8">
             {etapes.map((etape, index) => (
               <div key={etape.title} className="flex gap-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-[#D4A017] text-white rounded-full flex items-center justify-center font-bold text-xl">
+                <div className="flex-shrink-0 w-12 h-12 bg-[#D4A017] text-[#0D1F5C] rounded-full flex items-center justify-center font-bold text-xl">
                   {index + 1}
                 </div>
                 <div className="flex-1 p-6 bg-white rounded border border-[#E2E5EC]">

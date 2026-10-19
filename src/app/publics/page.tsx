@@ -98,7 +98,7 @@ export default function PublicsPage() {
               </div>
               <a
                 href="/contact"
-                className="inline-block mt-auto px-4 py-2 bg-[#D4A017] text-white rounded text-sm font-semibold hover:bg-[#B8860B] transition-colors"
+                className="inline-block mt-auto px-4 py-2 bg-[#D4A017] text-[#0D1F5C] rounded text-sm font-semibold hover:bg-[#E9C25A] transition-colors"
               >
                 {publicCible.cta}
               </a>

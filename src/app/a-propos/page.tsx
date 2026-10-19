@@ -34,9 +34,9 @@ export default function AProposPage() {
           </div>
 
           <div className="p-6 bg-white rounded border border-[#E2E5EC]">
-            <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">Nos partenaires</h2>
+            <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">Mise en œuvre</h2>
             <p className="text-[#5A6072]">
-              Nous travaillons avec des organismes de formation partenaires sélectionnés pour leurs compétences, leurs infrastructures et leur expérience. Ces partenaires animent les sessions selon nos spécifications.
+              La mise en œuvre des formations est confiée à des organismes de formation désignés projet par projet, qui animent les sessions selon nos spécifications. Aucun partenariat n'est publié à ce jour.
             </p>
           </div>
 

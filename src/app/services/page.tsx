@@ -2,7 +2,6 @@ export default function ServicesPage() {
   const services = [
     {
       title: 'Diagnostic métiers',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/832fead0.webp',
       definition:
         "Analyser les besoins en compétences d'une organisation, cartographier les métiers et identifier les écarts entre compétences disponibles et attendues.",
       description:
@@ -14,7 +13,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Référentiels',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/82a15399.webp',
       definition:
         "Concevoir des référentiels d'activités et de compétences ainsi que des référentiels de métiers, alignés sur les réalités locales et les standards de référence.",
       description:
@@ -26,7 +24,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Curricula et parcours',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/c1b762d4.webp',
       definition:
         "Structurer des curricula et parcours pédagogiques complets : objectifs d'apprentissage, modules, séquences, durées et méthodes d'animation.",
       description:
@@ -38,7 +35,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Contenus et supports',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/36bf6879.webp',
       definition:
         "Produire des contenus pédagogiques adaptés au public cible : supports de cours, guides pratiques, études de cas et exercices contextualisés.",
       description:
@@ -50,19 +46,17 @@ export default function ServicesPage() {
     },
     {
       title: 'Évaluation des acquis',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/812b251c.webp',
       definition:
         "Concevoir des outils d'évaluation des compétences : tests de connaissances, mises en situation et grilles d'observation objectives.",
       description:
         "Conception d'outils d'évaluation : tests de connaissances, mises en situation, grilles d'observation.",
-      livrables: ["Tests d'évaluation", "Grilles d'observation", 'Certificats'],
+      livrables: ["Tests d'évaluation", "Grilles d'observation"],
       perimetre:
         "XP-NOVA conçoit les dispositifs d'évaluation ; la passation et la délivrance en session relèvent des organismes partenaires.",
       duree: '10 à 20 jours',
     },
     {
       title: 'Cahiers des charges',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/1af5bfb4.webp',
       definition:
         "Rédiger des cahiers des charges destinés aux organismes de formation partenaires : objectifs pédagogiques, profils requis et infrastructures.",
       description:
@@ -74,7 +68,6 @@ export default function ServicesPage() {
     },
     {
       title: 'Suivi pédagogique',
-      image: 'https://d2lm3begjhzc49.cloudfront.net/generated-images/fbcd438d.webp',
       definition:
         "Concevoir des dispositifs de suivi et de pilotage pédagogique : indicateurs, tableaux de bord et modèles de rapports.",
       description:
@@ -101,12 +94,8 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
-              <img
-                src={service.image}
-                alt={`Illustration — ${service.title}`}
-                className="w-full h-40 object-cover"
-                loading="lazy"
-              />
+              {/* Images générées par IA (CDN tiers) retirées — CDC-RECETTE §7, lot 6. */}
+              <div aria-hidden className="h-1.5 bg-[#B4470F]" />
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
                 <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
@@ -144,7 +133,7 @@ export default function ServicesPage() {
           </div>
           <a
             href="/contact"
-            className="inline-block px-6 py-3 bg-[#D4A017] text-white rounded font-semibold hover:bg-[#B8860B] transition-colors"
+            className="inline-block px-6 py-3 bg-[#D4A017] text-[#0D1F5C] rounded font-semibold hover:bg-[#E9C25A] transition-colors"
           >
             Demander un cadrage pédagogique
           </a>
