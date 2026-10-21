@@ -59,13 +59,17 @@ export async function POST(req: Request) {
   }
 
   // Alerte WhatsApp à l'équipe (Green API) — non bloquante, inactive sans variables.
+  // Jamais d'envoi vers le prospect : le numéro WhatsApp qu'il laisse est seulement relayé à l'équipe.
   await alerterEquipe(
     [
       `🔔 Nouvelle demande ${SOURCE}`,
       [champs.type, champs.organisation ?? champs.localisation].filter(Boolean).join(" · "),
+      champs.public && `Public : ${champs.public}`,
       champs.filiere && `Filière : ${champs.filiere}`,
       `📧 ${email}`,
       champs.telephone && `📞 ${champs.telephone}`,
+      (champs.whatsapp || champs.canal === "whatsapp") &&
+        `💬 WhatsApp : ${champs.whatsapp ?? champs.telephone}${champs.canal === "whatsapp" ? " (canal préféré)" : ""}`,
       enregistrement === "crm" ? "CRM : piste créée" : "CRM : non enregistrée (voir le journal du site)",
     ]
       .filter(Boolean)

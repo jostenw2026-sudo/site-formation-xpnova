@@ -1,3 +1,6 @@
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
+import { SchemaParcours } from '@/components/Schemas';
 export default function ServicesPage() {
   const services = [
     {
@@ -94,10 +97,16 @@ export default function ServicesPage() {
           <p className="text-lg text-[#5A6072] max-w-3xl">
             We design complete training systems, from skills needs diagnostics to competency assessment. We design; partner organizations deliver.
           </p>
+          <IntroPage cle="services" lang="en">
+            <SchemaParcours lang="en" />
+          </IntroPage>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-[#F4F5F8]">
+        <div className="max-w-6xl mx-auto">
+          <TitreSection titre="The seven services" texte="For each one: what it consists of, the deliverables you receive, XP-NOVA's share of the work and the indicative design duration." />
+        </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
@@ -130,6 +139,7 @@ export default function ServicesPage() {
 
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <TitreSection titre="The limits of the scope" texte="What the division does not do, so you know from the outset what will need to be entrusted to a training organisation or an authority." />
           <div className="p-6 bg-[#F4F5F8] border-l-4 border-[#D4A017] mb-8">
             <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">What We Do Not Do</h2>
             <ul className="text-[#5A6072] list-disc list-inside">

@@ -5,6 +5,7 @@ import { SharedNavigation } from "@/components/shared/SharedNavigation";
 import Footer from "@/components/Footer";
 import "../globals.css";
 import { URL_SITES } from "@/lib/sites";
+import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 
 // Indexation : gérée par src/proxy.ts (en-tête X-Robots-Tag hors production).
 
@@ -48,6 +49,7 @@ const navItems = [
   { label: 'Network', href: '/en/reseau' },
   { label: 'References', href: '/en/references' },
   { label: 'About', href: '/en/a-propos' },
+  { label: 'FAQ', href: '/en/faq' },
   { label: 'Contact', href: '/en/contact' },
 ];
 
@@ -76,6 +78,7 @@ export default function EnglishLayout({
         <DivisionBadge divisionName="Training Engineering" />
         <main className="flex-1">{children}</main>
         <Footer lang="en" />
+        <BoutonWhatsApp lang="en" />
     </>
   );
 }

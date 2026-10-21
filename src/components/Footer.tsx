@@ -1,3 +1,4 @@
+import { lienWhatsapp, MESSAGES, NUMERO_WHATSAPP_AFFICHE } from '@/lib/whatsapp-public';
 import Link from 'next/link';
 import Image from 'next/image';
 import { URL_SITES } from "@/lib/sites";
@@ -35,6 +36,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         { href: '/reseau', label: 'Mise en œuvre' },
         { href: '/references', label: 'Références' },
         { href: '/a-propos', label: 'À propos' },
+        { href: '/faq', label: 'FAQ' },
         { href: '/contact', label: 'Contact' },
       ],
       portalItems: [
@@ -61,6 +63,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         { href: '/en/reseau', label: 'Network' },
         { href: '/en/references', label: 'References' },
         { href: '/en/a-propos', label: 'About' },
+        { href: '/en/faq', label: 'FAQ' },
         { href: '/en/contact', label: 'Contact' },
       ],
       portalItems: [
@@ -147,6 +150,14 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
               className="mt-1.5 block text-white/70 hover:text-[#D4A017]"
             >
               {site.phone}
+            </a>
+            <a
+              href={lienWhatsapp(MESSAGES[lang].defaut)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-white/70 hover:text-[#D4A017]"
+            >
+              WhatsApp {NUMERO_WHATSAPP_AFFICHE} ↗
             </a>
             <a
               href={`mailto:${site.email}`}

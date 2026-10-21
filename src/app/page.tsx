@@ -1,3 +1,7 @@
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
+import { SchemaRole } from '@/components/Schemas';
+
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -27,9 +31,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Chapeau pédagogique */}
+      <section className="py-10 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <IntroPage cle="accueil" lang="fr">
+            <SchemaRole lang="fr" />
+          </IntroPage>
+        </div>
+      </section>
+
       {/* Distinction */}
       <section className="py-8 px-6 bg-[#F4F5F8] border-l-4 border-[#D4A017]">
         <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Notre rôle en une phrase" texte="La frontière qui structure tout le site : XP-NOVA conçoit, les organismes de formation animent." className="mb-4" />
           <p className="text-[#0D1F5C]">
             <strong>Notre rôle :</strong> XP-NOVA conçoit les dispositifs de formation (référentiels, curricula, contenus, évaluations). L'animation des sessions, la mobilisation des formateurs et la gestion des participants sont assurées par des organismes de formation partenaires selon nos spécifications.
           </p>
@@ -39,10 +53,7 @@ export default function Home() {
       {/* Services */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0D1F5C] mb-4">7 services pour des formations professionnelles de qualité</h2>
-          <p className="text-[#5A6072] mb-8">
-            Nous accompagnons la conception de dispositifs de formation complets, du diagnostic des besoins en compétences jusqu'à l'évaluation des acquis.
-          </p>
+          <TitreSection titre="7 services pour des formations professionnelles de qualité" texte="Les étapes d'une ingénierie de formation complète, du diagnostic des besoins en compétences jusqu'au suivi du déploiement ; chacune se commande aussi séparément." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -90,10 +101,7 @@ export default function Home() {
       {/* Publics */}
       <section className="py-16 px-6 bg-[#F4F5F8]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0D1F5C] mb-4">7 publics pour des formations adaptées</h2>
-          <p className="text-[#5A6072] mb-8">
-            Nos dispositifs de formation sont conçus pour répondre aux besoins de divers acteurs de l'agrosystème.
-          </p>
+          <TitreSection titre="7 publics pour des formations adaptées" texte="Les acteurs de l'agrosystème pour lesquels nous concevons : repérez votre situation, la page Publics détaille le besoin type et notre réponse." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -141,10 +149,7 @@ export default function Home() {
       {/* CTA final */}
       <section className="py-16 px-6 bg-[#0D1F5C] text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Votre projet a besoin d'un dispositif de formation ?</h2>
-          <p className="mb-8 text-[#D4A017]">
-            Nos ingénieurs pédagogiques vous accompagnent dans la conception de référentiels, curricula et contenus adaptés aux réalités de l'agrosystème.
-          </p>
+          <TitreSection clair titre="Votre projet a besoin d'un dispositif de formation ?" texte="Un premier échange de cadrage, gratuit et sans engagement : nos ingénieurs pédagogiques vous répondent sous 48 h ouvrées." className="mb-6 [&>p]:mx-auto" />
           <a
             href="/contact"
             className="inline-block px-6 py-3 bg-[#D4A017] text-[#0D1F5C] rounded font-semibold hover:bg-[#E9C25A] transition-colors"
