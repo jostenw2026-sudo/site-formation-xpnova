@@ -16,20 +16,22 @@ export function lienWhatsapp(message: string): string {
   return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(message)}`;
 }
 
+// Le premier mot de chaque message est le mot-clé de la division (FORMATION / TRAINING) : le chatbot
+// du numéro public le reconnaît et propose directement les besoins de la division (volet 1, 21/10/2026).
 export const MESSAGES = {
   fr: {
-    defaut: "Bonjour XP-NOVA Formation, je souhaite échanger sur un projet de dispositif de formation.",
-    service: (service: string) => `Bonjour XP-NOVA Formation, je souhaite échanger sur le service « ${service} ».`,
-    page: (titre: string) => `Bonjour XP-NOVA Formation, je vous écris depuis la page « ${titre} ».`,
+    defaut: "FORMATION — Bonjour XP-NOVA Formation, je souhaite échanger sur un projet de dispositif de formation.",
+    service: (service: string) => `FORMATION — Bonjour XP-NOVA Formation, je souhaite échanger sur le service « ${service} ».`,
+    page: (titre: string) => `FORMATION — Bonjour XP-NOVA Formation, je vous écris depuis la page « ${titre} ».`,
     bouton: "Échanger sur WhatsApp",
     boutonCourt: "WhatsApp",
     aria: "Ouvrir une conversation WhatsApp avec XP-NOVA Formation",
     reponse: "Un ingénieur pédagogique vous répond sous 48 h ouvrées.",
   },
   en: {
-    defaut: "Hello XP-NOVA Training, I would like to discuss a training system project.",
-    service: (service: string) => `Hello XP-NOVA Training, I would like to discuss the "${service}" service.`,
-    page: (titre: string) => `Hello XP-NOVA Training, I am writing from the page "${titre}".`,
+    defaut: "TRAINING — Hello XP-NOVA Training, I would like to discuss a training system project.",
+    service: (service: string) => `TRAINING — Hello XP-NOVA Training, I would like to discuss the "${service}" service.`,
+    page: (titre: string) => `TRAINING — Hello XP-NOVA Training, I am writing from the page "${titre}".`,
     bouton: "Chat on WhatsApp",
     boutonCourt: "WhatsApp",
     aria: "Open a WhatsApp conversation with XP-NOVA Training",
