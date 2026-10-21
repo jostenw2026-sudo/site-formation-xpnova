@@ -6,6 +6,8 @@ import { alternatesPour } from '@/lib/alternates';
 
 export const metadata: Metadata = {
   alternates: alternatesPour('/services', 'fr'),
+  title: 'Nos services d\'ingénierie pédagogique — Ingénierie de la formation XP-NOVA',
+  description: 'Du diagnostic des besoins en compétences à l\'évaluation des acquis : référentiels, curricula, supports pédagogiques et outils d\'évaluation. XP-NOVA conçoit, les organismes partenaires animent.',
 };
 
 export default function ServicesPage() {

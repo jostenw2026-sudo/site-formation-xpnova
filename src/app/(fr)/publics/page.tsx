@@ -5,6 +5,8 @@ import { alternatesPour } from '@/lib/alternates';
 
 export const metadata: Metadata = {
   alternates: alternatesPour('/publics', 'fr'),
+  title: 'Nos publics cibles — Ingénierie de la formation XP-NOVA',
+  description: 'Promoteurs, coopératives, entreprises agro-industrielles, collectivités, programmes, organismes de formation et partenaires : le besoin type de chaque public et le dispositif que XP-NOVA conçoit en réponse.',
 };
 
 export default function PublicsPage() {

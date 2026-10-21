@@ -6,6 +6,8 @@ import { alternatesPour } from '@/lib/alternates';
 
 export const metadata: Metadata = {
   alternates: alternatesPour('/', 'fr'),
+  title: 'Ingénierie de la formation professionnelle agricole — XP-NOVA',
+  description: 'Diagnostic métiers, référentiels de compétences, curricula, contenus et évaluation : XP-NOVA conçoit les dispositifs de formation dont les projets agro-systémiques ont besoin, au Cameroun et en Afrique centrale.',
 };
 
 export default function Home() {
