@@ -4,6 +4,7 @@ import { UtilityBar } from "@/components/shared/UtilityBar";
 import { DivisionBadge } from "@/components/shared/DivisionBadge";
 import { SharedNavigation } from "@/components/shared/SharedNavigation";
 import Footer from "@/components/Footer";
+import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import { ConditionalFrenchLayout } from "@/components/ConditionalFrenchLayout";
 import "./globals.css";
 import { URL_SITES } from "@/lib/sites";
@@ -83,6 +84,9 @@ export default function RootLayout({
           <DivisionBadge divisionName="Ingénierie de la formation" />
         </ConditionalFrenchLayout>
         <ZonePrincipale>{children}</ZonePrincipale>
+        <ConditionalFrenchLayout>
+          <BoutonWhatsApp lang="fr" />
+        </ConditionalFrenchLayout>
         <ConditionalFrenchLayout>
           <Footer />
         </ConditionalFrenchLayout>

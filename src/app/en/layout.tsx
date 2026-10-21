@@ -3,6 +3,7 @@ import { UtilityBar } from "@/components/shared/UtilityBar";
 import { DivisionBadge } from "@/components/shared/DivisionBadge";
 import { SharedNavigation } from "@/components/shared/SharedNavigation";
 import Footer from "@/components/Footer";
+import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import "../globals.css";
 import { URL_SITES } from "@/lib/sites";
 
@@ -75,6 +76,7 @@ export default function EnglishLayout({
         </div>
         <DivisionBadge divisionName="Training Engineering" />
         <main className="flex-1">{children}</main>
+        <BoutonWhatsApp lang="en" />
         <Footer lang="en" />
     </>
   );
