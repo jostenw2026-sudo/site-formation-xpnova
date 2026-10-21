@@ -5,6 +5,8 @@ import { alternatesPour } from '@/lib/alternates';
 
 export const metadata: Metadata = {
   alternates: alternatesPour('/a-propos', 'fr'),
+  title: 'À propos de la division Ingénierie de la formation — XP-NOVA',
+  description: 'La division Ingénierie de la formation de XP-NOVA conçoit des dispositifs de formation professionnelle adaptés aux métiers de l\'agrosystème : positionnement, approche, expertise, mise en œuvre et limites.',
 };
 
 export default function AProposPage() {

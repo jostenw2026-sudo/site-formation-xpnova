@@ -6,6 +6,8 @@ import { alternatesPour } from '@/lib/alternates';
 
 export const metadata: Metadata = {
   alternates: alternatesPour('/approche', 'fr'),
+  title: 'Notre approche pédagogique — Ingénierie de la formation XP-NOVA',
+  description: 'Une ingénierie de la formation fondée sur le travail réel : tâches, équipements et technologies, normes de qualité et résultats attendus, puis conception d\'un dispositif mesurable.',
 };
 
 export default function ApprochePage() {

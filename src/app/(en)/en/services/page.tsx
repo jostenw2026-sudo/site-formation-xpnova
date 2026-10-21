@@ -6,6 +6,8 @@ import { alternatesPour } from '@/lib/alternates';
 
 export const metadata: Metadata = {
   alternates: alternatesPour('/services', 'en'),
+  title: 'Our training engineering services — Training Engineering XP-NOVA',
+  description: 'From skills needs diagnostics to competency assessment: frameworks, curricula, learning materials and assessment tools. XP-NOVA designs; partner organisations deliver.',
 };
 
 export default function ServicesPage() {
