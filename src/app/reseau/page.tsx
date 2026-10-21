@@ -1,3 +1,6 @@
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
+import { SchemaRole } from '@/components/Schemas';
 // Recette du 19/10/2026 (lot 6, CDC-RECETTE-XPNOVA v1.1 §7) : la page affirmait un
 // « réseau d'organismes de formation partenaires sélectionnés », des « partenariats
 // formalisés par contrats », une « rémunération selon les résultats » et une
@@ -16,10 +19,16 @@ export default function ReseauPage() {
             participants — est assurée par des organismes de formation, sur la base des cahiers des
             charges que nous rédigeons.
           </p>
+          <IntroPage cle="reseau" lang="fr">
+            <SchemaRole lang="fr" />
+          </IntroPage>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-[#F4F5F8]">
+        <div className="max-w-6xl mx-auto">
+          <TitreSection titre="La répartition des rôles" texte="Ce que nos cahiers des charges imposent aux organismes qui animent, les domaines couverts et l'état des partenariats." />
+        </div>
         <div className="max-w-6xl mx-auto space-y-8">
           <div className="p-6 bg-white rounded border border-[#E2E5EC]">
             <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">Ce que nos cahiers des charges précisent</h2>
@@ -53,6 +62,7 @@ export default function ReseauPage() {
 
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Rejoindre les organismes consultés" texte="Comment un organisme de formation se fait connaître pour être consulté sur les projets qui correspondent à ses domaines et à ses moyens." />
           <div className="p-6 bg-[#F4F5F8] border-l-4 border-[#D4A017]">
             <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">Vous êtes un organisme de formation ?</h2>
             <p className="text-[#5A6072] mb-4">

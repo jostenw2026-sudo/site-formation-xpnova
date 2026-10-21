@@ -1,3 +1,6 @@
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
+import { SchemaParcours } from '@/components/Schemas';
 export default function ApprochePage() {
   const etapes = [
     {
@@ -30,12 +33,15 @@ export default function ApprochePage() {
           <p className="text-lg text-[#5A6072] max-w-3xl">
             Notre approche pédagogique se fonde sur l'analyse des tâches de travail réelles, des équipements utilisés, des normes de qualité et des résultats attendus.
           </p>
+          <IntroPage cle="approche" lang="fr">
+            <SchemaParcours lang="fr" />
+          </IntroPage>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-[#F4F5F8]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0D1F5C] mb-8">Partir des tâches de travail réelles</h2>
+          <TitreSection titre="Partir des tâches de travail réelles" texte="Les cinq étapes de la méthode : les quatre premières observent et décrivent le travail, la cinquième en déduit le dispositif de formation." />
           <div className="space-y-8">
             {etapes.map((etape, index) => (
               <div key={etape.title} className="flex gap-6">
@@ -54,6 +60,7 @@ export default function ApprochePage() {
 
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Ce que la méthode garantit" texte="Un dispositif conçu à partir du travail réel se mesure : chaque objectif renvoie à une tâche observable et à un indicateur." />
           <div className="p-6 bg-[#F4F5F8] border-l-4 border-[#D4A017]">
             <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">Mesurabilité</h2>
             <p className="text-[#5A6072]">

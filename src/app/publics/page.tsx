@@ -1,3 +1,5 @@
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
 export default function PublicsPage() {
   const publics = [
     {
@@ -80,10 +82,14 @@ export default function PublicsPage() {
           <p className="text-lg text-[#5A6072] max-w-3xl">
             Nos dispositifs de formation sont conçus pour répondre aux besoins de divers acteurs de l'agrosystème : nous les concevons, les organismes partenaires les animent.
           </p>
+          <IntroPage cle="publics" lang="fr" />
         </div>
       </section>
 
       <section className="py-16 px-6 bg-[#F4F5F8]">
+        <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Sept publics, sept besoins types" texte="Pour chaque public : la situation de départ que nous rencontrons le plus souvent et le dispositif que nous concevons pour y répondre." />
+        </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {publics.map((publicCible) => (
             <div key={publicCible.title} className="p-6 bg-white rounded border border-[#E2E5EC] flex flex-col">
