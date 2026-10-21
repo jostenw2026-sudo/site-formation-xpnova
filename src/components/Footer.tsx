@@ -60,7 +60,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         { href: '/en/services', label: 'Services' },
         { href: '/en/publics', label: 'Audiences' },
         { href: '/en/approche', label: 'Approach' },
-        { href: '/en/reseau', label: 'Network' },
+        { href: '/en/reseau', label: 'Delivery' },
         { href: '/en/references', label: 'References' },
         { href: '/en/a-propos', label: 'About' },
         { href: '/en/faq', label: 'FAQ' },
