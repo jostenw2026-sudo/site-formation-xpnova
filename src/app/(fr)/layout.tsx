@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import "../globals.css";
 import { URL_SITES } from "@/lib/sites";
 import BandeauRecette from "@/components/BandeauRecette";
+import { Analytics } from "@/components/Analytics";
 import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import { sourceSans, playfair } from "@/lib/polices";
 
@@ -83,6 +84,8 @@ export default function FrenchRootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <BoutonWhatsApp lang="fr" />
+        {/* Mesure d'audience GA4 : inactive sans NEXT_PUBLIC_GA_MEASUREMENT_ID, hors production. */}
+        <Analytics />
       </body>
     </html>
   );
