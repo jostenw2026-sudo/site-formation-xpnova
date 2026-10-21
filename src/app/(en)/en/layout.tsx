@@ -7,6 +7,7 @@ import "../../globals.css";
 import { URL_SITES } from "@/lib/sites";
 import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import BandeauRecette from "@/components/BandeauRecette";
+import { Analytics } from "@/components/Analytics";
 import { sourceSans, playfair } from "@/lib/polices";
 
 // Layout racine des pages anglaises (groupe (en), sans effet sur les URL : /en/…).
@@ -88,6 +89,8 @@ export default function EnglishRootLayout({
         <main className="flex-1">{children}</main>
         <Footer lang="en" />
         <BoutonWhatsApp lang="en" />
+        {/* Mesure d'audience GA4 : inactive sans NEXT_PUBLIC_GA_MEASUREMENT_ID, hors production. */}
+        <Analytics />
       </body>
     </html>
   );
