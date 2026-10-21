@@ -1,4 +1,7 @@
 import { Metadata } from 'next';
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
+import { SchemaRole } from '@/components/Schemas';
 
 export const metadata: Metadata = {
   title: 'Professional Training Engineering | XP-NOVA',
@@ -34,9 +37,19 @@ export default function HomeEN() {
         </div>
       </section>
 
+      {/* Reading guide */}
+      <section className="py-10 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <IntroPage cle="accueil" lang="en">
+            <SchemaRole lang="en" />
+          </IntroPage>
+        </div>
+      </section>
+
       {/* Distinction */}
       <section className="py-8 px-6 bg-[#F4F5F8] border-l-4 border-[#D4A017]">
         <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Our role in one sentence" texte="The boundary that structures the whole site: XP-NOVA designs, training organisations deliver." className="mb-4" />
           <p className="text-[#0D1F5C]">
             <strong>Our role:</strong> XP-NOVA designs training systems (frameworks, curricula, content, assessments). Session facilitation, trainer mobilization and participant management are provided by partner training organizations according to our specifications.
           </p>
@@ -46,10 +59,7 @@ export default function HomeEN() {
       {/* Services */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0D1F5C] mb-4">7 services for quality professional training</h2>
-          <p className="text-[#5A6072] mb-8">
-            We support the design of complete training systems, from skills needs diagnosis to learning assessment.
-          </p>
+          <TitreSection titre="7 services for quality professional training" texte="The steps of a complete training engineering, from skills needs diagnosis to deployment monitoring; each can also be ordered separately." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -97,10 +107,7 @@ export default function HomeEN() {
       {/* Publics */}
       <section className="py-16 px-6 bg-[#F4F5F8]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0D1F5C] mb-4">7 audiences for adapted training</h2>
-          <p className="text-[#5A6072] mb-8">
-            Our training systems are designed to meet the needs of various agro-system actors.
-          </p>
+          <TitreSection titre="7 audiences for adapted training" texte="The agro-system actors we design for: find your situation, the Audiences page details the typical need and our answer." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
@@ -148,10 +155,7 @@ export default function HomeEN() {
       {/* CTA final */}
       <section className="py-16 px-6 bg-[#0D1F5C] text-white">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Does your project need a training system?</h2>
-          <p className="mb-8 text-[#D4A017]">
-            Our pedagogical engineers support you in the design of frameworks, curricula and content adapted to the realities of the agro-system.
-          </p>
+          <TitreSection clair titre="Does your project need a training system?" texte="A first scoping exchange, free and without commitment: our training engineers reply within 48 working hours." className="mb-6 [&>p]:mx-auto" />
           <a
             href="/en/contact"
             className="inline-block px-6 py-3 bg-[#D4A017] text-[#0D1F5C] rounded font-semibold hover:bg-[#E9C25A] transition-colors"

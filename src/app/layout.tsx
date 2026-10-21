@@ -9,6 +9,7 @@ import "./globals.css";
 import { URL_SITES } from "@/lib/sites";
 import BandeauRecette from "@/components/BandeauRecette";
 import { ZonePrincipale } from "@/components/ZonePrincipale";
+import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 
 // Polices de la charte A, auto-hébergées (mêmes fichiers WOFF2 que le portail) : Arial abandonné.
 const sourceSans = localFont({ src: "./fonts/SourceSans3.woff2", weight: "200 900", display: "swap", variable: "--font-source-sans" });
@@ -56,6 +57,7 @@ const navItems = [
   { label: 'Mise en œuvre', href: '/reseau' },
   { label: 'Références', href: '/references' },
   { label: 'À propos', href: '/a-propos' },
+  { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -85,6 +87,7 @@ export default function RootLayout({
         <ZonePrincipale>{children}</ZonePrincipale>
         <ConditionalFrenchLayout>
           <Footer />
+          <BoutonWhatsApp lang="fr" />
         </ConditionalFrenchLayout>
       </body>
     </html>

@@ -1,3 +1,6 @@
+import IntroPage from '@/components/IntroPage';
+import TitreSection from '@/components/TitreSection';
+import { SchemaParcours } from '@/components/Schemas';
 export default function ServicesPage() {
   const services = [
     {
@@ -94,10 +97,16 @@ export default function ServicesPage() {
           <p className="text-lg text-[#5A6072] max-w-3xl">
             Nous concevons des dispositifs de formation complets, du diagnostic des besoins en compétences jusqu'à l'évaluation des acquis. Nous concevons ; les organismes partenaires animent.
           </p>
+          <IntroPage cle="services" lang="fr">
+            <SchemaParcours lang="fr" />
+          </IntroPage>
         </div>
       </section>
 
       <section className="py-16 px-6 bg-[#F4F5F8]">
+        <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Les sept services" texte="Pour chacun : ce qu'il consiste à faire, les livrables que vous recevez, la part qui revient à XP-NOVA et la durée indicative de conception." />
+        </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
@@ -130,6 +139,7 @@ export default function ServicesPage() {
 
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <TitreSection titre="Les limites du périmètre" texte="Ce que la division ne fait pas, pour que vous sachiez d'emblée ce qu'il faudra confier à un organisme de formation ou à une autorité." />
           <div className="p-6 bg-[#F4F5F8] border-l-4 border-[#D4A017] mb-8">
             <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">Ce que nous ne faisons pas</h2>
             <ul className="text-[#5A6072] list-disc list-inside">
