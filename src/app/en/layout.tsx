@@ -46,7 +46,7 @@ const navItems = [
   { label: 'Services', href: '/en/services' },
   { label: 'Audiences', href: '/en/publics' },
   { label: 'Approach', href: '/en/approche' },
-  { label: 'Network', href: '/en/reseau' },
+  { label: 'Delivery', href: '/en/reseau' },
   { label: 'References', href: '/en/references' },
   { label: 'About', href: '/en/a-propos' },
   { label: 'FAQ', href: '/en/faq' },

@@ -14,8 +14,13 @@ const ROUTES = [
     "/reseau",
     "/services",
     "/en",
+    "/en/a-propos",
+    "/en/approche",
     "/en/contact",
     "/en/faq",
+    "/en/publics",
+    "/en/references",
+    "/en/reseau",
     "/en/services",
 ];
 

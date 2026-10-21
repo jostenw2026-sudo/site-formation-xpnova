@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { pageEquivalente } from '@/lib/pages-miroir';
 import { URL_SITES } from "@/lib/sites";
 import { BoutonAgroboussole } from "@/components/AppelAgroboussole";
 
@@ -44,6 +46,9 @@ export const UtilityBar: React.FC<UtilityBarProps> = ({
   currentKey,
 }) => {
   const fr = currentLang === 'fr';
+  // Bascule FR/EN vers la page équivalente quand elle existe (src/lib/pages-miroir.ts).
+  const chemin = usePathname();
+  const autreLangue = pageEquivalente(chemin, fr ? 'en' : 'fr');
   const libelleDivisions = fr ? 'Nos divisions' : 'Our divisions';
 
   const badge = (division: Division, grand = false) => {
@@ -101,7 +106,7 @@ export const UtilityBar: React.FC<UtilityBarProps> = ({
               </button>
             ) : (
               <Link
-                href={fr ? '/en' : '/'}
+                href={autreLangue}
                 className="rounded border border-white/50 px-2 py-0.5 text-xs font-bold text-white no-underline hover:border-[#E9C25A] hover:text-[#E9C25A]"
                 aria-label={fr ? 'Version anglaise' : 'Version française'}
               >
