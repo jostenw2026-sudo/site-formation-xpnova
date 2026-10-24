@@ -1,15 +1,13 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/services', 'en'),
+export const generateMetadata = metadonneesPage('/services', 'en', {
   title: 'Our training engineering services — Training Engineering XP-NOVA',
   description: 'From skills needs diagnostics to competency assessment: frameworks, curricula, learning materials and assessment tools. XP-NOVA designs; partner organisations deliver.',
-};
+});
 
 export default function ServicesPage() {
   const services = [

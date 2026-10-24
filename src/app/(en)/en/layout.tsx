@@ -9,6 +9,7 @@ import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import BandeauRecette from "@/components/BandeauRecette";
 import { Analytics } from "@/components/Analytics";
 import { sourceSans, playfair } from "@/lib/polices";
+import { URL_PRODUCTION } from "@/lib/indexation";
 
 // Layout racine des pages anglaises (groupe (en), sans effet sur les URL : /en/…).
 // <html lang="en"> rendu au serveur (décision DG du 21/10/2026) ; reprend ce que
@@ -17,6 +18,8 @@ import { sourceSans, playfair } from "@/lib/polices";
 // Indexation : gérée par src/proxy.ts (en-tête X-Robots-Tag hors production).
 
 export const metadata: Metadata = {
+  // Base des URL relatives (images de partage) : l'hôte de production, comme les canonical.
+  metadataBase: new URL(URL_PRODUCTION),
   title: "Training Engineering — Educational Programs Design — XP-NOVA",
   description: "Design of frameworks, curricula, content and assessments for agricultural and agro-industrial professional training in Cameroon and Central Africa.",
 };

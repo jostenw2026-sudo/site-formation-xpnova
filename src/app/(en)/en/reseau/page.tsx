@@ -1,18 +1,16 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaRole } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
 // Miroir anglais de /reseau (« Mise en œuvre des formations ») : même prudence que la
 // page française depuis la recette du 19/10/2026 — aucun partenaire, contrat ni réseau
 // affirmé ; seule la répartition des rôles est décrite.
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/reseau', 'en'),
+export const generateMetadata = metadonneesPage('/reseau', 'en', {
   title: 'Training delivery — Training Engineering XP-NOVA',
   description: 'XP-NOVA designs training systems; training organisations deliver them on the basis of our specifications. Division of roles, areas covered and how a training organisation can be consulted.',
-};
+});
 
 export default function ReseauPage() {
   return (

@@ -1,14 +1,12 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/approche', 'fr'),
+export const generateMetadata = metadonneesPage('/approche', 'fr', {
   title: 'Notre approche pédagogique — Ingénierie de la formation XP-NOVA',
   description: 'Une ingénierie de la formation fondée sur le travail réel : tâches, équipements et technologies, normes de qualité et résultats attendus, puis conception d\'un dispositif mesurable.',
-};
+});
 
 export default function ApprochePage() {
   const etapes = [

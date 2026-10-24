@@ -1,13 +1,11 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/publics', 'fr'),
+export const generateMetadata = metadonneesPage('/publics', 'fr', {
   title: 'Nos publics cibles — Ingénierie de la formation XP-NOVA',
   description: 'Promoteurs, coopératives, entreprises agro-industrielles, collectivités, programmes, organismes de formation et partenaires : le besoin type de chaque public et le dispositif que XP-NOVA conçoit en réponse.',
-};
+});
 
 export default function PublicsPage() {
   const publics = [

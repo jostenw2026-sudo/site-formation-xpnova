@@ -1,14 +1,12 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/approche', 'en'),
+export const generateMetadata = metadonneesPage('/approche', 'en', {
   title: 'Our pedagogical approach — Training Engineering XP-NOVA',
   description: 'A training engineering method grounded in real work: tasks, equipment and technologies, quality standards and expected results, then the design of a measurable training system.',
-};
+});
 
 export default function ApprochePage() {
   const etapes = [

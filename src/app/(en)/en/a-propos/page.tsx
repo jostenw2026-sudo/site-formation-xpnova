@@ -1,13 +1,11 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/a-propos', 'en'),
+export const generateMetadata = metadonneesPage('/a-propos', 'en', {
   title: 'About the Training Engineering division — XP-NOVA',
   description: "XP-NOVA's Training Engineering division designs vocational training systems suited to agro-system professions: positioning, approach, expertise, delivery and limits.",
-};
+});
 
 export default function AProposPage() {
   return (

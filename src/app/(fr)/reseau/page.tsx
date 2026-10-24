@@ -1,14 +1,12 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaRole } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/reseau', 'fr'),
+export const generateMetadata = metadonneesPage('/reseau', 'fr', {
   title: 'Mise en œuvre des formations — Ingénierie de la formation XP-NOVA',
   description: 'XP-NOVA conçoit les dispositifs ; les organismes de formation les mettent en œuvre sur la base de nos cahiers des charges. Répartition des rôles, domaines couverts et consultation d\'un organisme.',
-};
+});
 
 // Recette du 19/10/2026 (lot 6, CDC-RECETTE-XPNOVA v1.1 §7) : la page affirmait un
 // « réseau d'organismes de formation partenaires sélectionnés », des « partenariats

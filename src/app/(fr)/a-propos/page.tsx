@@ -1,13 +1,11 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/a-propos', 'fr'),
+export const generateMetadata = metadonneesPage('/a-propos', 'fr', {
   title: 'À propos de la division Ingénierie de la formation — XP-NOVA',
   description: 'La division Ingénierie de la formation de XP-NOVA conçoit des dispositifs de formation professionnelle adaptés aux métiers de l\'agrosystème : positionnement, approche, expertise, mise en œuvre et limites.',
-};
+});
 
 export default function AProposPage() {
   return (

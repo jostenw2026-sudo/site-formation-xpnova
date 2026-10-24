@@ -1,15 +1,13 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/services', 'fr'),
+export const generateMetadata = metadonneesPage('/services', 'fr', {
   title: 'Nos services d\'ingénierie pédagogique — Ingénierie de la formation XP-NOVA',
   description: 'Du diagnostic des besoins en compétences à l\'évaluation des acquis : référentiels, curricula, supports pédagogiques et outils d\'évaluation. XP-NOVA conçoit, les organismes partenaires animent.',
-};
+});
 
 export default function ServicesPage() {
   const services = [

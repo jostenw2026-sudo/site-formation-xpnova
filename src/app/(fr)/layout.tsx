@@ -9,6 +9,7 @@ import BandeauRecette from "@/components/BandeauRecette";
 import { Analytics } from "@/components/Analytics";
 import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import { sourceSans, playfair } from "@/lib/polices";
+import { URL_PRODUCTION } from "@/lib/indexation";
 
 // Layout racine des pages françaises (groupe (fr), sans effet sur les URL).
 // Les pages anglaises ont le leur : src/app/(en)/en/layout.tsx, <html lang="en">
@@ -17,6 +18,8 @@ import { sourceSans, playfair } from "@/lib/polices";
 // Indexation : gérée par src/proxy.ts (en-tête X-Robots-Tag hors production).
 
 export const metadata: Metadata = {
+  // Base des URL relatives (images de partage) : l'hôte de production, comme les canonical.
+  metadataBase: new URL(URL_PRODUCTION),
   title: "Ingénierie de la formation — Conception de dispositifs pédagogiques — XP-NOVA",
   description: "Conception de référentiels, curricula, contenus et évaluations pour la formation professionnelle agricole et agro-industrielle au Cameroun et en Afrique centrale.",
 };

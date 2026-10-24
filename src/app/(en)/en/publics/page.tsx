@@ -1,13 +1,11 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/publics', 'en'),
+export const generateMetadata = metadonneesPage('/publics', 'en', {
   title: 'Target audiences — Training Engineering XP-NOVA',
   description: 'Promoters, cooperatives, agro-industrial companies, local authorities, programmes, training organisations and partners: the typical need of each audience and the training system XP-NOVA designs in response.',
-};
+});
 
 export default function PublicsPage() {
   const publics = [

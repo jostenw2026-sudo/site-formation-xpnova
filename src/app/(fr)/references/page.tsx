@@ -1,13 +1,11 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/references', 'fr'),
+export const generateMetadata = metadonneesPage('/references', 'fr', {
   title: 'Projets d\'ingénierie pédagogique — Ingénierie de la formation XP-NOVA',
   description: 'XP-NOVA ne publie une référence qu\'une fois documentée : rôle exact de XP-NOVA, client, lieu, période et livrable. Aucune référence n\'est publiée à ce jour.',
-};
+});
 
 export default function ReferencesPage() {
   return (
