@@ -130,8 +130,8 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
           <Image
             src="/brand/logo_xpnova_white_mono.png"
             alt="XP-NOVA — Bureau d'Ingénierie Conseil"
-            width={350}
-            height={80}
+            width={228}
+            height={52}
             className="h-[52px] w-auto"
           />
           <p className="mt-3.5 text-[1.2rem] font-bold italic leading-none text-[#D4A017]/80">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
@@ -120,7 +121,7 @@ export default function ServicesPage() {
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded border border-[#E2E5EC] overflow-hidden flex flex-col">
               {/* Illustration générée par IA, hébergée par le site : mention unique en bas de la liste (DG, 20/10/2026). */}
-              <img src={service.image} alt={`Illustration — ${service.title}`} className="w-full h-40 object-cover" loading="lazy" width={1200} height={800} />
+              <Image src={service.image} alt={`Illustration — ${service.title}`} className="w-full h-40 object-cover" width={1200} height={800} sizes="(min-width: 1152px) 368px, (min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw" />
               <div className="p-6 flex flex-col flex-1">
                 <h2 className="text-xl font-bold text-[#0D1F5C] mb-3">{service.title}</h2>
                 <p className="text-[#5A6072] mb-4 text-sm italic">{service.definition}</p>
