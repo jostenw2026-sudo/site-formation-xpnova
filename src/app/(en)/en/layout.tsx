@@ -21,23 +21,24 @@ export const metadata: Metadata = {
   description: "Design of frameworks, curricula, content and assessments for agricultural and agro-industrial professional training in Cameroon and Central Africa.",
 };
 
+// Pages anglaises : liens vers la version anglaise (/en) des sites du groupe.
 const divisions = [
   {
     key: 'agrovita',
     name: 'AGROVITA',
-    url: URL_SITES.agrovita,
+    url: `${URL_SITES.agrovita}/en`,
     accentColor: '#2E7D32',
   },
   {
     key: 'odt',
     name: 'ODT',
-    url: URL_SITES.odt,
+    url: `${URL_SITES.odt}/en`,
     accentColor: '#0E4C5A',
   },
   {
     key: 'technologie',
     name: 'Technology',
-    url: URL_SITES.technologie,
+    url: `${URL_SITES.technologie}/en`,
     accentColor: '#3D5A73',
   },
   {
@@ -74,7 +75,7 @@ export default function EnglishRootLayout({
         <div className="sticky top-0 z-50">
           <UtilityBar
             divisions={divisions}
-            siteUrl={URL_SITES.portail}
+            siteUrl={`${URL_SITES.portail}/en`}
             currentKey="formation"
             currentLang="en"
           />
@@ -85,7 +86,7 @@ export default function EnglishRootLayout({
             logoHref="/en"
           />
         </div>
-        <DivisionBadge divisionName="Training Engineering" />
+        <DivisionBadge divisionName="Training Engineering" lang="en" parentUrl={`${URL_SITES.portail}/en`} />
         <main className="flex-1">{children}</main>
         <Footer lang="en" />
         <BoutonWhatsApp lang="en" />

@@ -67,9 +67,9 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         { href: '/en/contact', label: 'Contact' },
       ],
       portalItems: [
-        { href: URL_SITES.portail, label: 'XP-NOVA' },
-        { href: `${URL_SITES.portail}/cabinet`, label: 'The Firm' },
-        { href: `${URL_SITES.portail}/metiers`, label: 'Professions' },
+        { href: `${URL_SITES.portail}/en`, label: 'XP-NOVA' },
+        { href: `${URL_SITES.portail}/en/cabinet`, label: 'The Firm' },
+        { href: `${URL_SITES.portail}/en/metiers`, label: 'Professions' },
         { href: `${URL_SITES.portail}/portail`, label: 'Internal Portal' },
       ],
     },
@@ -88,32 +88,35 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
     legal: G.identiteLegale,
   };
 
+  // Sites des divisions : adresse absolue (URL_SITES) ; sur les pages EN, leur version
+  // anglaise (/en). Les anciens liens relatifs (/agrovita, /odt…) menaient à une 404.
+  const versionLangue = (url: string) => (lang === 'en' ? `${url}/en` : url);
   const ecosystem = [
     {
       key: 'agrovita',
       name: 'AGROVITA',
-      href: '/agrovita',
+      href: versionLangue(URL_SITES.agrovita),
       url: URL_SITES.agrovita,
       tagline: lang === 'fr' ? division('agrovita').tagline : division('agrovita').taglineEn,
     },
     {
       key: 'odt',
       name: 'ODT',
-      href: '/odt',
+      href: versionLangue(URL_SITES.odt),
       url: URL_SITES.odt,
       tagline: lang === 'fr' ? division('odt').tagline : division('odt').taglineEn,
     },
     {
       key: 'technologie',
       name: lang === 'fr' ? 'Technologie' : 'Technology',
-      href: '/technologie',
+      href: versionLangue(URL_SITES.technologie),
       url: URL_SITES.technologie,
       tagline: lang === 'fr' ? division('technologie').tagline : division('technologie').taglineEn,
     },
     {
       key: 'formation',
       name: lang === 'fr' ? 'Formation' : 'Training',
-      href: '/formation',
+      href: versionLangue(URL_SITES.formation),
       url: URL_SITES.formation,
       tagline: lang === 'fr' ? division('formation').tagline : division('formation').taglineEn,
     },
@@ -129,7 +132,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         <div className="sm:col-span-2 lg:col-span-1">
           <Image
             src="/brand/logo_xpnova_white_mono.png"
-            alt="XP-NOVA — Bureau d'Ingénierie Conseil"
+            alt={`XP-NOVA — ${t.baseline}`}
             width={228}
             height={52}
             className="h-[52px] w-auto"
@@ -211,15 +214,15 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
           <ul className="space-y-4 text-[0.9rem] leading-snug">
             {ecosystem.map((e) => (
               <li key={e.key}>
-                <Link
+                <a
                   href={e.href}
                   className="font-bold text-white no-underline hover:text-[#D4A017]"
                 >
                   {e.name}
-                </Link>
+                </a>
                 <span className="mt-0.5 block text-white/60">{e.tagline}</span>
                 <a
-                  href={e.url}
+                  href={e.href}
                   target="_blank"
                   rel="noopener"
                   className="mt-0.5 block text-[0.78rem] text-white/40 hover:text-[#D4A017]"
