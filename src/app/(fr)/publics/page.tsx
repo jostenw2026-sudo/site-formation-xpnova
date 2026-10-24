@@ -1,6 +1,7 @@
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/publics', 'fr', {
   title: 'Nos publics cibles — Ingénierie de la formation XP-NOVA',
@@ -85,6 +86,7 @@ export default function PublicsPage() {
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="fr" cheminFr="/publics" nom="Nos publics cibles" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">Nos publics cibles</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             Nos dispositifs de formation sont conçus pour répondre aux besoins de divers acteurs de l'agrosystème : nous les concevons, les organismes partenaires les animent.

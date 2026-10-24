@@ -3,6 +3,7 @@ import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
 import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/services', 'en', {
   title: 'Our training engineering services — Training Engineering XP-NOVA',
@@ -101,6 +102,7 @@ export default function ServicesPage() {
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="en" cheminFr="/services" nom="Our Training Engineering Services" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">Our Training Engineering Services</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             We design complete training systems, from skills needs diagnostics to competency assessment. We design; partner organizations deliver.

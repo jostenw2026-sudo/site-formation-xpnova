@@ -1,9 +1,10 @@
 import { FAQ } from '@/content/faq';
 import { INTROS } from '@/content/intros';
 import { lienWhatsapp, MESSAGES } from '@/lib/whatsapp-public';
+import { FilAriane, JsonLd } from '@/components/JsonLd';
 
 // Page FAQ FR/EN : accordéons natifs <details>, aucun script ; données JSON-LD FAQPage
-// pour le référencement. Contenu dans src/content/faq.ts. Modèle repris du site Technologie.
+// et fil d'Ariane pour le référencement. Contenu dans src/content/faq.ts. Modèle repris du site Technologie.
 
 export default function PageFaq({ lang }: { lang: 'fr' | 'en' }) {
   const themes = FAQ[lang];
@@ -21,7 +22,8 @@ export default function PageFaq({ lang }: { lang: 'fr' | 'en' }) {
 
   return (
     <div className="flex flex-col">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <JsonLd data={jsonLd} />
+      <FilAriane langue={lang} cheminFr="/faq" nom={t.titre} />
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">{t.titre}</h1>

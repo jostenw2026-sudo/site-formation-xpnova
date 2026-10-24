@@ -2,6 +2,7 @@ import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaRole } from '@/components/Schemas';
 import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
 // Miroir anglais de /reseau (« Mise en œuvre des formations ») : même prudence que la
 // page française depuis la recette du 19/10/2026 — aucun partenaire, contrat ni réseau
@@ -17,6 +18,7 @@ export default function ReseauPage() {
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="en" cheminFr="/reseau" nom="Training delivery" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">Training delivery</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             XP-NOVA designs training systems: competency frameworks, curricula, content and assessments.

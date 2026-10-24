@@ -1,4 +1,5 @@
 import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
 // La page est un composant client (formulaire) : sa metadata vit ici.
 export const generateMetadata = metadonneesPage('/contact', 'fr', {
@@ -7,5 +8,11 @@ export const generateMetadata = metadonneesPage('/contact', 'fr', {
 });
 
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      {/* Fil d'Ariane (JSON-LD) : nom = H1 de page.tsx, composant client */}
+      <FilAriane langue="fr" cheminFr="/contact" nom="Contactez-nous" />
+      {children}
+    </>
+  );
 }

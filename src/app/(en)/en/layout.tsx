@@ -10,6 +10,7 @@ import BandeauRecette from "@/components/BandeauRecette";
 import { Analytics } from "@/components/Analytics";
 import { sourceSans, playfair } from "@/lib/polices";
 import { URL_PRODUCTION } from "@/lib/indexation";
+import { JsonLd, organisationLd } from "@/components/JsonLd";
 
 // Layout racine des pages anglaises (groupe (en), sans effet sur les URL : /en/…).
 // <html lang="en"> rendu au serveur (décision DG du 21/10/2026) ; reprend ce que
@@ -72,6 +73,8 @@ export default function EnglishRootLayout({
   return (
     <html lang="en" className={`${sourceSans.variable} ${playfair.variable}`}>
       <body className="min-h-full flex flex-col">
+        {/* Données structurées : la division, rattachée à l'organisation du groupe (src/components/JsonLd.tsx) */}
+        <JsonLd data={organisationLd("en", String(metadata.description))} />
         {/* Recette locale : bandeau rendu seulement si SITE_ENV=recette */}
         <BandeauRecette />
         {/* Barre du groupe + navigation : un seul bloc collant (demande du DG, 20/10/2026) */}

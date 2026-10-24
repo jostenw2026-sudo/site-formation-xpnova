@@ -1,6 +1,7 @@
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/a-propos', 'fr', {
   title: 'À propos de la division Ingénierie de la formation — XP-NOVA',
@@ -12,6 +13,7 @@ export default function AProposPage() {
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="fr" cheminFr="/a-propos" nom="À propos de la division Ingénierie de la formation" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">À propos de la division Ingénierie de la formation</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             La division Ingénierie de la formation de XP-NOVA conçoit des dispositifs de formation professionnelle adaptés aux réalités des métiers de l'agrosystème.

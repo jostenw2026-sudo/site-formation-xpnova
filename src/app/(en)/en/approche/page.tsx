@@ -2,6 +2,7 @@ import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaParcours } from '@/components/Schemas';
 import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/approche', 'en', {
   title: 'Our pedagogical approach — Training Engineering XP-NOVA',
@@ -36,6 +37,7 @@ export default function ApprochePage() {
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="en" cheminFr="/approche" nom="Our pedagogical approach" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">Our pedagogical approach</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             Our pedagogical approach is based on the analysis of real work tasks, the equipment used, quality standards and expected results.
