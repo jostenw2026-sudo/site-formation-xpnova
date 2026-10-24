@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/references', 'en'),
+export const generateMetadata = metadonneesPage('/references', 'en', {
   title: 'Training engineering projects — Training Engineering XP-NOVA',
   description: "XP-NOVA publishes a reference only once it is documented: XP-NOVA's exact role, client, location, period and deliverable. No reference has been published to date.",
-};
+});
 
 export default function ReferencesPage() {
   return (
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="en" cheminFr="/references" nom="Training engineering projects" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">Training engineering projects</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             References will be published once documented: XP-NOVA&apos;s exact role, client, location and period.

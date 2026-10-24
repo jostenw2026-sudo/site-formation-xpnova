@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/a-propos', 'en'),
+export const generateMetadata = metadonneesPage('/a-propos', 'en', {
   title: 'About the Training Engineering division — XP-NOVA',
   description: "XP-NOVA's Training Engineering division designs vocational training systems suited to agro-system professions: positioning, approach, expertise, delivery and limits.",
-};
+});
 
 export default function AProposPage() {
   return (
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="en" cheminFr="/a-propos" nom="About the Training Engineering division" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">About the Training Engineering division</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             XP-NOVA&apos;s Training Engineering division designs vocational training systems suited to the realities of agro-system professions.

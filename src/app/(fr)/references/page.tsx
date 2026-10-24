@@ -1,19 +1,19 @@
-import type { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
+import { FilAriane } from '@/components/JsonLd';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/references', 'fr'),
+export const generateMetadata = metadonneesPage('/references', 'fr', {
   title: 'Projets d\'ingénierie pédagogique — Ingénierie de la formation XP-NOVA',
   description: 'XP-NOVA ne publie une référence qu\'une fois documentée : rôle exact de XP-NOVA, client, lieu, période et livrable. Aucune référence n\'est publiée à ce jour.',
-};
+});
 
 export default function ReferencesPage() {
   return (
     <div className="flex flex-col">
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
+          <FilAriane langue="fr" cheminFr="/references" nom="Projets d'ingénierie pédagogique" />
           <h1 className="text-4xl font-bold text-[#0D1F5C] mb-6">Projets d'ingénierie pédagogique</h1>
           <p className="text-lg text-[#5A6072] max-w-3xl">
             Les références seront publiées une fois documentées : rôle exact de XP-NOVA, client, lieu et période.

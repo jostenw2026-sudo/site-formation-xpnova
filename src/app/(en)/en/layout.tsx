@@ -9,6 +9,8 @@ import BoutonWhatsApp from "@/components/BoutonWhatsApp";
 import BandeauRecette from "@/components/BandeauRecette";
 import { Analytics } from "@/components/Analytics";
 import { sourceSans, playfair } from "@/lib/polices";
+import { URL_PRODUCTION } from "@/lib/indexation";
+import { JsonLd, organisationLd } from "@/components/JsonLd";
 
 // Layout racine des pages anglaises (groupe (en), sans effet sur les URL : /en/…).
 // <html lang="en"> rendu au serveur (décision DG du 21/10/2026) ; reprend ce que
@@ -17,27 +19,30 @@ import { sourceSans, playfair } from "@/lib/polices";
 // Indexation : gérée par src/proxy.ts (en-tête X-Robots-Tag hors production).
 
 export const metadata: Metadata = {
+  // Base des URL relatives (images de partage) : l'hôte de production, comme les canonical.
+  metadataBase: new URL(URL_PRODUCTION),
   title: "Training Engineering — Educational Programs Design — XP-NOVA",
   description: "Design of frameworks, curricula, content and assessments for agricultural and agro-industrial professional training in Cameroon and Central Africa.",
 };
 
+// Pages anglaises : liens vers la version anglaise (/en) des sites du groupe.
 const divisions = [
   {
     key: 'agrovita',
     name: 'AGROVITA',
-    url: URL_SITES.agrovita,
+    url: `${URL_SITES.agrovita}/en`,
     accentColor: '#2E7D32',
   },
   {
     key: 'odt',
     name: 'ODT',
-    url: URL_SITES.odt,
+    url: `${URL_SITES.odt}/en`,
     accentColor: '#0E4C5A',
   },
   {
     key: 'technologie',
     name: 'Technology',
-    url: URL_SITES.technologie,
+    url: `${URL_SITES.technologie}/en`,
     accentColor: '#3D5A73',
   },
   {
@@ -68,13 +73,15 @@ export default function EnglishRootLayout({
   return (
     <html lang="en" className={`${sourceSans.variable} ${playfair.variable}`}>
       <body className="min-h-full flex flex-col">
+        {/* Données structurées : la division, rattachée à l'organisation du groupe (src/components/JsonLd.tsx) */}
+        <JsonLd data={organisationLd("en", String(metadata.description))} />
         {/* Recette locale : bandeau rendu seulement si SITE_ENV=recette */}
         <BandeauRecette />
         {/* Barre du groupe + navigation : un seul bloc collant (demande du DG, 20/10/2026) */}
         <div className="sticky top-0 z-50">
           <UtilityBar
             divisions={divisions}
-            siteUrl={URL_SITES.portail}
+            siteUrl={`${URL_SITES.portail}/en`}
             currentKey="formation"
             currentLang="en"
           />
@@ -85,7 +92,7 @@ export default function EnglishRootLayout({
             logoHref="/en"
           />
         </div>
-        <DivisionBadge divisionName="Training Engineering" />
+        <DivisionBadge divisionName="Training Engineering" lang="en" parentUrl={`${URL_SITES.portail}/en`} />
         <main className="flex-1">{children}</main>
         <Footer lang="en" />
         <BoutonWhatsApp lang="en" />

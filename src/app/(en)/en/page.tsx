@@ -1,14 +1,12 @@
-import { Metadata } from 'next';
 import IntroPage from '@/components/IntroPage';
 import TitreSection from '@/components/TitreSection';
 import { SchemaRole } from '@/components/Schemas';
-import { alternatesPour } from '@/lib/alternates';
+import { metadonneesPage } from '@/lib/metadonnees';
 
-export const metadata: Metadata = {
-  alternates: alternatesPour('/', 'en'),
+export const generateMetadata = metadonneesPage('/', 'en', {
   title: 'Professional Training Engineering | XP-NOVA',
   description: 'We design professional training systems adapted to agro-system professions: competency frameworks, curricula, educational content and assessment tools.',
-};
+});
 
 export default function HomeEN() {
   return (
