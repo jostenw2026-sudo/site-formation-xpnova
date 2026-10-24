@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { indexationAutorisee } from "@/lib/indexation";
+import { indexationAutorisee, redirectionAlias } from "@/lib/indexation";
 
 // Protection contre l'indexation hors production (voir src/lib/indexation.ts).
 // - Hôte de production : rien ne change, les pages restent statiques.
@@ -9,6 +9,10 @@ import { indexationAutorisee } from "@/lib/indexation";
 //   remplacé par une interdiction totale.
 export function proxy(request: NextRequest) {
   const hote = request.headers.get("x-forwarded-host") ?? request.headers.get("host");
+  // Adresse courte (ingform.xp-nova.com) : 308 vers l'hôte de production.
+  const { pathname, search } = request.nextUrl;
+  const alias = redirectionAlias(hote, pathname + search);
+  if (alias) return NextResponse.redirect(alias, 308);
   if (indexationAutorisee(hote)) return NextResponse.next();
 
   if (request.nextUrl.pathname === "/robots.txt") {
@@ -22,5 +26,9 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|brand/).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|brand/).*)",
+    // Adresse courte : toutes les requêtes sont redirigées, fichiers statiques compris.
+    { source: "/:path*", has: [{ type: "host", value: "ingform\\.xp-nova\\.com" }] },
+  ],
 };
