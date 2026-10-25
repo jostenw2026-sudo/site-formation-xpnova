@@ -12,6 +12,9 @@ type Langue = "fr" | "en";
 
 /** Identifiant de l'organisation du groupe, déclaré par le portail xp-nova.com. */
 const ID_GROUPE = "https://xp-nova.com/#organisation";
+// Fiche Google Business Profile de XP-NOVA (lien public communiqué par la direction le
+// 25/10/2026), portée par l'organisation du groupe que référence parentOrganization.
+const FICHE_GOOGLE = "https://maps.app.goo.gl/xaTfVMgpvk4sHu5W9";
 const ID_DIVISION = `${URL_PRODUCTION}/#organisation`;
 
 /** JSON pour un <script> : « < » échappé en \u003c (guide JSON-LD de Next). */
@@ -63,6 +66,7 @@ export function organisationLd(langue: Langue, description: string) {
       "@id": ID_GROUPE,
       name: G.groupe.nom,
       url: "https://xp-nova.com",
+      sameAs: [FICHE_GOOGLE],
     },
   };
 }
