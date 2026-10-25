@@ -4,7 +4,7 @@ import { metadonneesPage } from '@/lib/metadonnees';
 import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/references', 'fr', {
-  title: 'Projets d\'ingénierie pédagogique — Ingénierie de la formation XP-NOVA',
+  title: 'Projets d\'ingénierie pédagogique — XP-NOVA',
   description: 'XP-NOVA ne publie une référence qu\'une fois documentée : rôle exact de XP-NOVA, client, lieu, période et livrable. Aucune référence n\'est publiée à ce jour.',
 });
 

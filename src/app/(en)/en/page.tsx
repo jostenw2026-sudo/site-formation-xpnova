@@ -4,7 +4,7 @@ import { SchemaRole } from '@/components/Schemas';
 import { metadonneesPage } from '@/lib/metadonnees';
 
 export const generateMetadata = metadonneesPage('/', 'en', {
-  title: 'Professional Training Engineering | XP-NOVA',
+  title: 'Professional Training Engineering — XP-NOVA',
   description: 'We design professional training systems adapted to agro-system professions: competency frameworks, curricula, educational content and assessment tools.',
 });
 
