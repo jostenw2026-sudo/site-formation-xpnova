@@ -6,7 +6,7 @@ import { metadonneesPage } from '@/lib/metadonnees';
 import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/services', 'en', {
-  title: 'Our training engineering services — Training Engineering XP-NOVA',
+  title: 'Our training engineering services — XP-NOVA',
   description: 'From skills diagnostics to competency assessment: frameworks, curricula, materials and assessment tools. XP-NOVA designs; partner organisations deliver.',
 });
 
