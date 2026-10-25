@@ -5,7 +5,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/references', 'en', {
   title: 'Training engineering projects — Training Engineering XP-NOVA',
-  description: "XP-NOVA publishes a reference only once it is documented: XP-NOVA's exact role, client, location, period and deliverable. No reference has been published to date.",
+  description: "XP-NOVA publishes a reference only once documented: XP-NOVA's exact role, client, location, period and deliverable. No reference has been published to date.",
 });
 
 export default function ReferencesPage() {

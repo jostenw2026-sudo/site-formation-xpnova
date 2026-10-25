@@ -5,7 +5,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/a-propos', 'fr', {
   title: 'À propos de la division Ingénierie de la formation — XP-NOVA',
-  description: 'La division Ingénierie de la formation de XP-NOVA conçoit des dispositifs de formation professionnelle adaptés aux métiers de l\'agrosystème : positionnement, approche, expertise, mise en œuvre et limites.',
+  description: 'La division Ingénierie de la formation de XP-NOVA conçoit des dispositifs de formation professionnelle adaptés aux métiers de l\'agrosystème.',
 });
 
 export default function AProposPage() {

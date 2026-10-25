@@ -6,7 +6,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/approche', 'en', {
   title: 'Our pedagogical approach — Training Engineering XP-NOVA',
-  description: 'A training engineering method grounded in real work: tasks, equipment and technologies, quality standards and expected results, then the design of a measurable training system.',
+  description: 'A training engineering method grounded in real work: tasks, equipment, quality standards and expected results, then the design of a measurable system.',
 });
 
 export default function ApprochePage() {

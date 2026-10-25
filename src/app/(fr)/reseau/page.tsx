@@ -6,7 +6,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/reseau', 'fr', {
   title: 'Mise en œuvre des formations — Ingénierie de la formation XP-NOVA',
-  description: 'XP-NOVA conçoit les dispositifs ; les organismes de formation les mettent en œuvre sur la base de nos cahiers des charges. Répartition des rôles, domaines couverts et consultation d\'un organisme.',
+  description: 'XP-NOVA conçoit les dispositifs ; les organismes de formation les mettent en œuvre. Répartition des rôles, domaines couverts et consultation d\'un organisme.',
 });
 
 // Recette du 19/10/2026 (lot 6, CDC-RECETTE-XPNOVA v1.1 §7) : la page affirmait un
