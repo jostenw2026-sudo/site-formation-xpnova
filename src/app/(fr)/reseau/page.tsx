@@ -5,7 +5,7 @@ import { metadonneesPage } from '@/lib/metadonnees';
 import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/reseau', 'fr', {
-  title: 'Mise en œuvre des formations — Ingénierie de la formation XP-NOVA',
+  title: 'Conception et mise en œuvre des formations — XP-NOVA',
   description: 'XP-NOVA conçoit les dispositifs ; les organismes de formation les mettent en œuvre. Répartition des rôles, domaines couverts et consultation d\'un organisme.',
 });
 
