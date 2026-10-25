@@ -6,8 +6,8 @@ import { metadonneesPage } from '@/lib/metadonnees';
 import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/services', 'fr', {
-  title: 'Nos services d\'ingénierie pédagogique — Ingénierie de la formation XP-NOVA',
-  description: 'Du diagnostic des besoins en compétences à l\'évaluation des acquis : référentiels, curricula, supports pédagogiques et outils d\'évaluation. XP-NOVA conçoit, les organismes partenaires animent.',
+  title: 'Nos services d\'ingénierie pédagogique — XP-NOVA',
+  description: 'Du diagnostic des compétences à l\'évaluation des acquis : référentiels, curricula, supports et évaluation. XP-NOVA conçoit, les partenaires animent.',
 });
 
 export default function ServicesPage() {

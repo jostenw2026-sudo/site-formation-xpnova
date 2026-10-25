@@ -4,8 +4,8 @@ import { SchemaRole } from '@/components/Schemas';
 import { metadonneesPage } from '@/lib/metadonnees';
 
 export const generateMetadata = metadonneesPage('/', 'fr', {
-  title: 'Ingénierie de la formation professionnelle agricole — XP-NOVA',
-  description: 'Diagnostic métiers, référentiels de compétences, curricula, contenus et évaluation : XP-NOVA conçoit les dispositifs de formation dont les projets agro-systémiques ont besoin, au Cameroun et en Afrique centrale.',
+  title: 'Ingénierie de la formation agricole — XP-NOVA',
+  description: 'Diagnostic métiers, référentiels de compétences, curricula, contenus et évaluation : XP-NOVA conçoit les formations des projets agro-systémiques.',
 });
 
 export default function Home() {

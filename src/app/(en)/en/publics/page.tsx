@@ -5,7 +5,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/publics', 'en', {
   title: 'Target audiences — Training Engineering XP-NOVA',
-  description: 'Promoters, cooperatives, agro-industrial companies, local authorities, programmes, training organisations and partners: the typical need of each audience and the training system XP-NOVA designs in response.',
+  description: 'Promoters, cooperatives, agro-industrial companies, local authorities, programmes, training organisations and partners: the typical need of each audience.',
 });
 
 export default function PublicsPage() {

@@ -6,7 +6,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/approche', 'fr', {
   title: 'Notre approche pédagogique — Ingénierie de la formation XP-NOVA',
-  description: 'Une ingénierie de la formation fondée sur le travail réel : tâches, équipements et technologies, normes de qualité et résultats attendus, puis conception d\'un dispositif mesurable.',
+  description: 'Ingénierie de la formation fondée sur le travail réel : tâches, équipements, normes de qualité et résultats attendus, puis conception d\'un dispositif mesurable.',
 });
 
 export default function ApprochePage() {

@@ -10,7 +10,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/reseau', 'en', {
   title: 'Training delivery — Training Engineering XP-NOVA',
-  description: 'XP-NOVA designs training systems; training organisations deliver them on the basis of our specifications. Division of roles, areas covered and how a training organisation can be consulted.',
+  description: 'XP-NOVA designs training systems; training organisations deliver them. Division of roles, areas covered and how a training organisation can be consulted.',
 });
 
 export default function ReseauPage() {

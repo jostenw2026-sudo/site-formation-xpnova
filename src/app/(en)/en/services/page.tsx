@@ -7,7 +7,7 @@ import { FilAriane } from '@/components/JsonLd';
 
 export const generateMetadata = metadonneesPage('/services', 'en', {
   title: 'Our training engineering services — Training Engineering XP-NOVA',
-  description: 'From skills needs diagnostics to competency assessment: frameworks, curricula, learning materials and assessment tools. XP-NOVA designs; partner organisations deliver.',
+  description: 'From skills diagnostics to competency assessment: frameworks, curricula, materials and assessment tools. XP-NOVA designs; partner organisations deliver.',
 });
 
 export default function ServicesPage() {
