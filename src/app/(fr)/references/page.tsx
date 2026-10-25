@@ -3,9 +3,12 @@ import TitreSection from '@/components/TitreSection';
 import { metadonneesPage } from '@/lib/metadonnees';
 import { FilAriane } from '@/components/JsonLd';
 
+// Hors index (liens suivis) et hors sitemap tant qu'aucune référence n'est publiée
+// (tableau de référencement validé le 24/10/2026, section 7.4).
 export const generateMetadata = metadonneesPage('/references', 'fr', {
   title: 'Projets d\'ingénierie pédagogique — XP-NOVA',
   description: 'XP-NOVA ne publie une référence qu\'une fois documentée : rôle exact de XP-NOVA, client, lieu, période et livrable. Aucune référence n\'est publiée à ce jour.',
+  robots: { index: false, follow: true },
 });
 
 export default function ReferencesPage() {

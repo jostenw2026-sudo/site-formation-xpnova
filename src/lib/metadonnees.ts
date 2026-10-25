@@ -35,7 +35,7 @@ const LOCALE = { fr: "fr_FR", en: "en_GB" } as const;
 export function metadonneesPage(
   cheminFr: string,
   langue: Langue,
-  { title, description }: { title: string; description: string },
+  { title, description, robots }: { title: string; description: string; robots?: Metadata["robots"] },
 ) {
   const alternates = alternatesPour(cheminFr, langue);
   const autreLangue: Langue = langue === "en" ? "fr" : "en";
@@ -45,6 +45,7 @@ export function metadonneesPage(
       alternates,
       title,
       description,
+      ...(robots ? { robots } : {}),
       openGraph: {
         type: "website",
         url: urlAbsolue(langue === "en" ? cheminAnglais(cheminFr) : cheminFr),
