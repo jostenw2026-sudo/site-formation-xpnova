@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Illustration from '@/components/Illustration';
 import { BLOG_DIVISION, BLOGS_GROUPE } from '@/content/blog';
 
 type Lang = 'fr' | 'en';
@@ -24,6 +25,7 @@ export default function PageBlog({ lang }: { lang: Lang }) {
           <p className="text-lg text-[#5A6072] max-w-3xl">
             {en ? "Analyses and lessons learned on training engineering for the agrosystem." : "Analyses et retours d’expérience sur l’ingénierie de la formation au service de l’agrosystème."}
           </p>
+          <Illustration src="/images/illustrations/contenus-supports.webp" alt={en ? "Designing training materials at a workstation" : "Conception de supports pédagogiques à un poste de travail"} lang={lang} />
         </div>
       </section>
 
