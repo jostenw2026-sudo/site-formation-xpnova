@@ -12,6 +12,7 @@ const ROUTES = [
     "/approche",
     "/contact",
     "/faq",
+    "/carrieres",
     "/publics",
     // "/references" et "/en/references" : hors sitemap tant qu'elles sont vides (noindex).
     "/reseau",
@@ -21,6 +22,7 @@ const ROUTES = [
     "/en/approche",
     "/en/contact",
     "/en/faq",
+    "/en/carrieres",
     "/en/publics",
     "/en/reseau",
     "/en/services",
