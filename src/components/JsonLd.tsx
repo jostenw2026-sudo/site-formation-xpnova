@@ -27,7 +27,7 @@ export function JsonLd({ data }: { data: object }) {
 }
 
 /**
- * La division Formation, rattachée à l'organisation du groupe. Nom, adresse,
+ * La division FORMATION, rattachée à l'organisation du groupe. Nom, adresse,
  * téléphone et courriel : src/content/donnees-groupe.json, dans la langue de la
  * page (comme le pied de page). Description : celle du layout de la langue.
  */

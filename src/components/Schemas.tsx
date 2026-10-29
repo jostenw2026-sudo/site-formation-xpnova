@@ -38,8 +38,8 @@ function Boite({ x, y, w, h, titre, lignes = [], fort = false, tint = false }: {
 export function SchemaRole({ lang = 'fr' }: { lang?: L }) {
   const t =
     lang === 'en'
-      ? { titre: 'XP-NOVA designs; training organisations deliver; you get skilled teams', a: 'XP-NOVA Training', a1: 'Professions diagnosis, frameworks', a2: 'Curricula, content, assessment', b: 'Training organisations', b1: 'Mobilise trainers, run sessions', b2: 'Manage the participants', c: 'You', c1: 'Fund and decide', c2: 'Put skills to work', f1: 'specifications', f2: 'monitoring indicators' }
-      : { titre: 'XP-NOVA conçoit ; les organismes de formation animent ; vos équipes montent en compétences', a: 'XP-NOVA Formation', a1: 'Diagnostic des métiers, référentiels', a2: 'Curricula, contenus, évaluation', b: 'Organismes de formation', b1: 'Mobilisent les formateurs', b2: 'Animent, gèrent les participants', c: 'Vous', c1: 'Financez et décidez', c2: 'Exploitez les compétences', f1: 'cahier des charges', f2: 'indicateurs de suivi' };
+      ? { titre: 'XP-NOVA designs; training organisations deliver; you get skilled teams', a: 'XP-NOVA TRAINING', a1: 'Professions diagnosis, frameworks', a2: 'Curricula, content, assessment', b: 'Training organisations', b1: 'Mobilise trainers, run sessions', b2: 'Manage the participants', c: 'You', c1: 'Fund and decide', c2: 'Put skills to work', f1: 'specifications', f2: 'monitoring indicators' }
+      : { titre: 'XP-NOVA conçoit ; les organismes de formation animent ; vos équipes montent en compétences', a: 'XP-NOVA FORMATION', a1: 'Diagnostic des métiers, référentiels', a2: 'Curricula, contenus, évaluation', b: 'Organismes de formation', b1: 'Mobilisent les formateurs', b2: 'Animent, gèrent les participants', c: 'Vous', c1: 'Financez et décidez', c2: 'Exploitez les compétences', f1: 'cahier des charges', f2: 'indicateurs de suivi' };
   return (
     <svg viewBox="0 0 760 200" role="img" aria-label={t.titre} className="w-full h-auto" fontFamily="inherit">
       <Fleche id="role-arrow" />

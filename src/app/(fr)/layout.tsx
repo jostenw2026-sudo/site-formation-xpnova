@@ -40,13 +40,13 @@ const divisions = [
   },
   {
     key: 'technologie',
-    name: 'Technologie',
+    name: 'TECHNOLOGIE',
     url: URL_SITES.technologie,
     accentColor: '#3D5A73',
   },
   {
     key: 'formation',
-    name: 'Formation',
+    name: 'FORMATION',
     url: URL_SITES.formation,
     accentColor: '#B4470F',
   },
@@ -59,6 +59,7 @@ const navItems = [
   { label: 'Approche', href: '/approche' },
   { label: 'Mise en œuvre', href: '/reseau' },
   { label: 'Références', href: '/references' },
+  { label: 'Blog', href: '/blog' },
   { label: 'À propos', href: '/a-propos' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Contact', href: '/contact' },
@@ -86,7 +87,7 @@ export default function FrenchRootLayout({
             logoHref="/"
           />
         </div>
-        <DivisionBadge divisionName="Ingénierie de la formation" />
+        <DivisionBadge divisionName="FORMATION" />
         <main className="flex-1">{children}</main>
         <Footer />
         <BoutonWhatsApp lang="fr" />

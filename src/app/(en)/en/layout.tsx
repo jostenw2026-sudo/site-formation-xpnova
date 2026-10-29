@@ -41,13 +41,13 @@ const divisions = [
   },
   {
     key: 'technologie',
-    name: 'Technology',
+    name: 'TECHNOLOGY',
     url: `${URL_SITES.technologie}/en`,
     accentColor: '#3D5A73',
   },
   {
     key: 'formation',
-    name: 'Training',
+    name: 'TRAINING',
     url: URL_SITES.formation,
     accentColor: '#B4470F',
   },
@@ -60,6 +60,7 @@ const navItems = [
   { label: 'Approach', href: '/en/approche' },
   { label: 'Delivery', href: '/en/reseau' },
   { label: 'References', href: '/en/references' },
+  { label: 'Blog', href: '/en/blog' },
   { label: 'About', href: '/en/a-propos' },
   { label: 'FAQ', href: '/en/faq' },
   { label: 'Contact', href: '/en/contact' },
@@ -92,7 +93,7 @@ export default function EnglishRootLayout({
             logoHref="/en"
           />
         </div>
-        <DivisionBadge divisionName="Training Engineering" lang="en" parentUrl={`${URL_SITES.portail}/en`} />
+        <DivisionBadge divisionName="TRAINING" lang="en" parentUrl={`${URL_SITES.portail}/en`} />
         <main className="flex-1">{children}</main>
         <Footer lang="en" />
         <BoutonWhatsApp lang="en" />

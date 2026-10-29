@@ -11,6 +11,8 @@ export const PAGES_MIROIR = [
   '/references',
   '/a-propos',
   '/faq',
+  '/blog',
+  '/carrieres',
   '/contact',
 ] as const;
 

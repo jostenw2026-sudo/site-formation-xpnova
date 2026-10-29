@@ -20,21 +20,21 @@ export function lienWhatsapp(message: string): string {
 // du numéro public le reconnaît et propose directement les besoins de la division (volet 1, 21/10/2026).
 export const MESSAGES = {
   fr: {
-    defaut: "FORMATION — Bonjour XP-NOVA Formation, je souhaite échanger sur un projet de dispositif de formation.",
-    service: (service: string) => `FORMATION — Bonjour XP-NOVA Formation, je souhaite échanger sur le service « ${service} ».`,
-    page: (titre: string) => `FORMATION — Bonjour XP-NOVA Formation, je vous écris depuis la page « ${titre} ».`,
+    defaut: "FORMATION — Bonjour XP-NOVA FORMATION, je souhaite échanger sur un projet de dispositif de formation.",
+    service: (service: string) => `FORMATION — Bonjour XP-NOVA FORMATION, je souhaite échanger sur le service « ${service} ».`,
+    page: (titre: string) => `FORMATION — Bonjour XP-NOVA FORMATION, je vous écris depuis la page « ${titre} ».`,
     bouton: "Échanger sur WhatsApp",
     boutonCourt: "WhatsApp",
-    aria: "Ouvrir une conversation WhatsApp avec XP-NOVA Formation",
+    aria: "Ouvrir une conversation WhatsApp avec XP-NOVA FORMATION",
     reponse: "Un ingénieur pédagogique vous répond sous 48 h ouvrées.",
   },
   en: {
-    defaut: "TRAINING — Hello XP-NOVA Training, I would like to discuss a training system project.",
-    service: (service: string) => `TRAINING — Hello XP-NOVA Training, I would like to discuss the "${service}" service.`,
-    page: (titre: string) => `TRAINING — Hello XP-NOVA Training, I am writing from the page "${titre}".`,
+    defaut: "TRAINING — Hello XP-NOVA TRAINING, I would like to discuss a training system project.",
+    service: (service: string) => `TRAINING — Hello XP-NOVA TRAINING, I would like to discuss the "${service}" service.`,
+    page: (titre: string) => `TRAINING — Hello XP-NOVA TRAINING, I am writing from the page "${titre}".`,
     bouton: "Chat on WhatsApp",
     boutonCourt: "WhatsApp",
-    aria: "Open a WhatsApp conversation with XP-NOVA Training",
+    aria: "Open a WhatsApp conversation with XP-NOVA TRAINING",
     reponse: "A training engineer replies within 48 working hours.",
   },
 } as const;
