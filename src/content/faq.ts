@@ -117,7 +117,7 @@ export const FAQ: Record<'fr' | 'en', ThemeFaq[]> = {
         },
         {
           q: 'Quelle différence avec AGROVITA, ODT et Technologie ?',
-          r: "AGROVITA accompagne un projet agricole ou agro-industriel de l'idée à la première vente ; ODT conduit des opérations de développement territorial avec les collectivités ; Technologie fait l'ingénierie des équipements. La division Formation conçoit les compétences dont ces projets ont besoin, en appui aux trois autres ou seule quand le besoin est purement pédagogique.",
+          r: "AGROVITA accompagne un projet agricole ou agro-industriel de l'idée à la première vente ; ODT conduit des opérations de développement territorial avec les collectivités ; Technologie fait l'ingénierie des équipements. La division FORMATION conçoit les compétences dont ces projets ont besoin, en appui aux trois autres ou seule quand le besoin est purement pédagogique.",
           lien: { label: 'Le portail XP-NOVA', href: URL_SITES.portail },
         },
       ],
@@ -222,7 +222,7 @@ export const FAQ: Record<'fr' | 'en', ThemeFaq[]> = {
         },
         {
           q: 'How do you differ from AGROVITA, ODT and Technology?',
-          r: 'AGROVITA supports an agricultural or agro-industrial project from idea to first sale; ODT leads territorial development operations with local authorities; Technology does equipment engineering. The Training division designs the skills those projects need, in support of the other three or alone when the need is purely educational.',
+          r: 'AGROVITA supports an agricultural or agro-industrial project from idea to first sale; ODT leads territorial development operations with local authorities; Technology does equipment engineering. The TRAINING division designs the skills those projects need, in support of the other three or alone when the need is purely educational.',
           lien: { label: 'The XP-NOVA portal', href: URL_SITES.portail },
         },
       ],

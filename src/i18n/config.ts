@@ -1,4 +1,4 @@
-// Configuration i18n pour XP-NOVA Formation
+// Configuration i18n pour XP-NOVA FORMATION
 export const i18n = {
   defaultLocale: 'fr',
   locales: ['fr', 'en'],

@@ -37,6 +37,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         { href: '/references', label: 'Références' },
         { href: '/a-propos', label: 'À propos' },
         { href: '/faq', label: 'FAQ' },
+        { href: '/blog', label: 'Blog' },
         { href: '/contact', label: 'Contact' },
       ],
       portalItems: [
@@ -65,6 +66,7 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
         { href: '/en/references', label: 'References' },
         { href: '/en/a-propos', label: 'About' },
         { href: '/en/faq', label: 'FAQ' },
+        { href: '/en/blog', label: 'Blog' },
         { href: '/en/contact', label: 'Contact' },
       ],
       portalItems: [
@@ -110,14 +112,14 @@ export default function Footer({ lang = 'fr' }: FooterProps) {
     },
     {
       key: 'technologie',
-      name: lang === 'fr' ? 'Technologie' : 'Technology',
+      name: lang === 'fr' ? 'TECHNOLOGIE' : 'TECHNOLOGY',
       href: versionLangue(URL_SITES.technologie),
       url: URL_SITES.technologie,
       tagline: lang === 'fr' ? division('technologie').tagline : division('technologie').taglineEn,
     },
     {
       key: 'formation',
-      name: lang === 'fr' ? 'Formation' : 'Training',
+      name: lang === 'fr' ? 'FORMATION' : 'TRAINING',
       href: versionLangue(URL_SITES.formation),
       url: URL_SITES.formation,
       tagline: lang === 'fr' ? division('formation').tagline : division('formation').taglineEn,
