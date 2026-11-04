@@ -85,7 +85,7 @@ export const INTROS: Record<'fr' | 'en', Record<CleIntro, Intro>> = {
       texte:
         "Cette page explique qui nous sommes, ce que nous faisons et, surtout, ce que nous ne faisons pas. Notre valeur tient à cette frontière : nous concevons des dispositifs de formation, nous n'animons pas de sessions et nous ne délivrons pas de certifications.",
       points: [
-        "Une division du bureau d'ingénierie conseil XP-NOVA, aux côtés d'AGROVITA, ODT et Technologie.",
+        "Une division du bureau d'études conseil XP-NOVA, aux côtés d'AGROVITA, ODT et Technologie.",
         'Une ingénierie fondée sur le travail réel : tâches, équipements, normes, résultats attendus.',
         "Un ancrage camerounais : les métiers, les filières et les contraintes locales sont dans chaque dispositif.",
       ],
