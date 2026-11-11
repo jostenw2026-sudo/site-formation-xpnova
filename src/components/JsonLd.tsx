@@ -34,7 +34,7 @@ export function JsonLd({ data }: { data: object }) {
 export function organisationLd(langue: Langue, description: string) {
   const en = langue === "en";
   const adresse = en ? G.coordonnees.adresseEn : G.coordonnees.adresse;
-  // « 134, Rue 1813, Vallée Bastos — B.P. 5603, Nlongkak, Yaoundé, Cameroun »
+  // « 80, Rue 1105, Etoa-Meki — B.P. 5603, Nlongkak, Yaoundé, Cameroun »
   const [rue, boitePostale] = adresse.split(" — ");
   return {
     "@context": "https://schema.org",
